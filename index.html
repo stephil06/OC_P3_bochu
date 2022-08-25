@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8"><!-- jeu de caractères pour passer au validateur W3C -->
+
+  <!-- Responsive : la largeur de la page du site correspond à la largeur de l'écran du visiteur -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title> OhMyFood - Réservez le menu qui vous convient </title>
+
+  <!-- ajouter une favicon (créée via le site : https://www.xiconeditor.com/) à partir de ./images/ohmyfood.png taillée en carré -->
+  <link rel="shortcut icon" type="image/x-icon" href="./images/favicon/ohmyfood.ico">
+
+  <!-- Fichier CSS pour "Font Awesome" (police de caractères pour afficher des icônes= picto) via CDN (dernière version) -->
+  <!-- version 5.* (la version gratuite) -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+
+  <!-- importer "normalize.css" téléchargé depuis https://github.com/necolas/normalize.css -->
+  <!-- la normalisation du CSS consiste à réajuster tous les styles par défaut des navigateurs afin d'éviter les différences majeurs 
+  de styles et de positionnement -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <!-- Fichier CSS en local -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!-- Nommage des classes selon la règle "BEM" : c_B__E-modificateur (Bloc__Element-modificateur) -->
+
+    <main>
+        
+        <!-- <header> ******************************************************************************* -->
+        <header>
+            <!-- <img src="./images/logo/ohmyfood.png" alt="Logo de la société Ohmyfood"> -->
+            <h1>ohmyfood</h1>
+        </header>
+        
+        <!-- <div> Localisation des restaurants **************************************************** -->
+        <div class="div__localisation-restaurants">    
+            <i class="fas fa-map-marker-alt"></i> <!-- picto "localisation" --> 
+            <p>Paris, Belleville</p>
+        </div>
+        
+        <!-- <section> "Présentation" ************************************************************** -->
+        <section class="c_section-presentation">
+            <h2>Réservez le menu qui vous convient</h2>
+            <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+            <button class="c_button-explorer-ou-commander">Explorer nos restaurants</button>
+        </section>
+
+        <!-- <nav> "Fonctionnement" ***************************************************************** -->  
+        <nav>
+          <h2>Fonctionnement</h2>
+          <ol>
+              <li>
+                <a href="#">
+                  <i class="fas fa-tablet-alt"></i>Choisissez un restaurant    <!-- picto "Tablette" -->
+                </a>
+              </li>
+              <li><a href="#">
+                <i class="fas fa-list-ul"></i>Composez votre menu             <!-- picto "Liste" -->
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fas fa-store"></i>Dégustez au restaurant          <!-- picto "Boutique" -->
+                </a>
+              </li>
+          </ol>
+        </nav>
+
+        <!-- <section> "Restaurants" ********************************************************************** -->
+        <section class="c_section-restaurants">
+            <h2>Restaurants</h2>
+            <div class="c_section-restaurants__div-les-articles">
+ 
+            <!-- "La Palette du goût" -->
+            <article class="c_section-restaurants__article">
+              <a href="la-palette-du-gout.html">
+                <img src="./images/restaurants/la-palette-du-gout.jpg"
+                  alt=""
+                  title="">
+                  <div class="c_section-restaurants__article__div-nouveau">Nouveau</div>
+                  <div class="c_section-restaurants__article__div-description">
+                    <h3>La Palette du goût</h3>
+                    <p>Ménilmontant</p>
+                    <div class="c_section-restaurants__article__div-evaluation">
+                      <!-- Picto "Coeur vide" -->
+                      <i class="far fa-heart"></i> <!-- far: vide (// fas: plein)  --> 
+                    </div>
+                  </div>
+              </a>
+            </article>
+
+            <!-- "La note enchantée" -->
+            <article class="c_section-restaurants__article">
+              <a href="la-note-enchantee.html">
+                <img src="./images/restaurants/la-note-enchantee.jpg"
+                  alt=""
+                  title="">
+                  <div class="c_section-restaurants__article__div-nouveau">Nouveau</div>
+                <div class="c_section-restaurants__article__div-description">
+                  <h3>La note enchantée</h3>
+                  <p>Charonne</p>
+                  <div class="c_section-restaurants__article__div-evaluation">
+                      <!--- picto "coeur plein" -->
+                      <i class="fas fa-heart"></i>
+                  </div>
+                </div>
+              </a>
+            </article>
+
+            <!-- "À la française" -->
+            <article class="c_section-restaurants__article">
+              <a href="a-la-francaise.html">
+                <img src="./images/restaurants/a-la-francaise.jpg"
+                  alt=""
+                  title="">
+                <div class="c_section-restaurants__article__div-description">
+                  <h3>À la française</h3>
+                  <p>Cité Rouge</p>
+                  <div class="c_section-restaurants__article__div-evaluation">
+                      <!-- Picto "Coeur vide" -->
+                      <i class="far fa-heart"></i>
+                  </div>
+                </div>
+              </a>
+            </article>
+
+            <!-- "Le délice des sens" -->
+            <article class="c_section-restaurants__article">
+              <a href="le-delice-des-sens.html">
+                <img src="./images/restaurants/le-delice-des-sens.jpg"
+                  alt=""
+                  title="">
+                <div class="c_section-restaurants__article__div-description">
+                  <h3>Le délice des sens</h3>
+                  <p>Folie-Méricourt</p>
+                  <div class="c_section-restaurants__article__div-evaluation">
+                      <!-- Picto "Coeur vide" -->
+                      <i class="far fa-heart"></i>
+                  </div>
+                </div>
+              </a>
+            </article>
+
+          </div> <!-- <div class="c_section-restaurants__div-les-articles"> -->
+        </section>
+        <!-- fin de <SECTION> "Restaurants" -->
+
+        <!-- <footer> (identique sur toutes les pages du SITE) ************************************************************************* -->
+        <footer>
+          <!-- <img src="./images/logo/ohmyfood.png" alt="logo ohmyfood"> -->
+          <h2>ohmyfood</h2>
+          <ul>
+              <li>              
+                  <i class="fas fa-utensils"></i>                             <!-- Picto "Ustensiles" -->
+                  <a class="c_footer__a-restaurant" href="#">Proposer un restaurant</a>
+              </li>
+              <li>    
+                  <i class="fas fa-hands-helping"></i>                        <!-- Picto "2 Mains" -->
+                  <a class="c_footer__a-partenaire" href="#">Devenir partenaire</a>
+              </li>
+              <li>
+                  <a href="#">Mentions légales</a>
+              </li>
+              <li>
+                  <address>
+                    <a href="mailto:contact@ohmyfood.com"> Contact </a>
+                  </address>
+              </li>
+          </ul>
+      </footer>
+      
+    </main>
+</body>
+
+</html>
