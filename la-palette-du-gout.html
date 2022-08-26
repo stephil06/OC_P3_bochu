@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <!-- validateur OK -->
+  <meta charset="utf-8"><!-- jeu de caractères pour passer au validateur W3C -->
+
+  <!-- Responsive : la largeur de la page du site correspond à la largeur de l'écran du visiteur -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>La Palette du goût</title>
+
+  <!-- Fichier CSS pour "Font Awesome" (police de caractères pour afficher des icônes= picto) via CDN (dernière version) -->
+  <!-- version 5.* (la version gratuite) -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+
+  <!-- importer "normalize.css" téléchargé depuis https://github.com/necolas/normalize.css -->
+  <!-- la normalisation du CSS consiste à réajuster tous les styles par défaut des navigateurs afin d'éviter les différences majeurs 
+  de styles et de positionnement -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <!-- Fichier CSS en local -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!-- Nommage des classes selon la règle "BEM" : c_B__E-modificateur (Bloc__Element-modificateur) -->
+
+    <!-- Header (identique sur toutes les pages du MENU) ************************************************************************ -->
+    <header class="c_header-menu">
+        <div class="logo">
+            <a href="./index.html">
+                <i class="fas fa-arrow-left"></i> <!-- Picto "flèche gauche" -->
+            </a>
+            <img src="./images/logo/ohmyfood.png" alt="Logo Ohmyfood">
+        </div>
+    </header>
+
+    <!-- <main> ****************************************************************************************************************** -->
+    <main>
+
+        <!-- Photo du restaurant -->
+        <img class = "c_img-menu" src="./images/restaurants/la-palette-du-gout.jpg" alt="La Palette du goût">
+
+        <!-- MENU du restaurant -->
+        <!-- <section> menu du restaurant ************************************************************************* -->
+        <section class="c_section-menu">   
+            <div class="c_section-menu__div-h-et-button">
+                <h1>La palette du goût</h1>
+                    <i class="far fa-heart"></i>        <!-- Picto "Coeur vide" -->
+            </div>
+
+        <!--  <section> ENTREES du restaurant ********************************************************************* -->
+        <section class="c_section-entrees"> 
+            <h3 class ="c_section-entrees__h">ENTRÉES</h3>
+
+            <!-- "Fricassée d'escargot" -->
+            <article class="c_section-entrees__article">
+                <h3>Fricassée d'escargot</h3>
+                <div class="c_section-entrees__article__div-description">
+                    <p>Au piment d'espelette</p>
+                    <p>25€</p>
+                    <button class="c_button-choisir"><i class="fas fa-check"></i></button>          <!-- Picto "Coche" -->
+                </div>
+            </article>
+
+            <!-- "Foie gras de canard mi-cuit" -->
+            <article class="c_section-entrees__article">
+                <h3>Foie gras de canard mi-cuit</h3>
+                <div class="c_section-entrees__article__div-description">
+                    <p>Et ses copeaux de truffe noire</p>
+                    <p>35€</p>
+                    <button class="c_button-choisir"><i class="fas fa-check"></i></button>          <!-- Picto "Coche" -->
+                </div>
+            </article>
+
+            <!-- "Oeuf au plat" -->
+            <article class="c_section-entrees__article">
+                <h3>Oeuf au plat</h3>
+                <div class="c_section-entrees__article__div-description">
+                    <p>Assaisonné à la truffe sur lit de caviar</p>
+                    <p>20€</p>
+                    <button class="c_button-choisir"><i class="fas fa-check"></i></button>          <!-- Picto "Coche" -->
+                </div>
+            </article>
+        </section> <!-- "c_section-entrees" -->
+
+        <!--  <section> PLATS du restaurant ********************************************************************* -->
+        <!-- PLATS du restaurant -->
+        <section class="c_section-plats"> 
+            <h3 class ="c_section-plats__h">PLATS</h3>    
+
+            <!-- "Filet de boeuf aux herbes" -->
+            <article class="c_section-plats__article">
+                <h3>Filet de boeuf aux herbes</h3>
+                <div class="c_section-plats__article__div-description">
+                    <p class="c_p-debut">Accompagné de sa ribambelle de légumes</p>
+                    <p>40€</p>
+                    <button class="c_button-choisir"><i class="fas fa-check"></i></button>          <!-- Picto "Coche" -->
+                </div>
+            </article>
+
+            <!-- "Parmentier de queue de boeuf" -->
+            <article class="c_section-plats__article">
+                <h3>Parmentier de queue de boeuf</h3>
+                <div class="c_section-plats__article__div-description">
+                    <p>À la truffe noire sur sa purée de panais</p>
+                    <p>35€</p>
+                    <button class="c_button-choisir"><i class="fas fa-check"></i></button>          <!-- Picto "Coche" -->
+                </div>
+            </article>
+
+            <!-- "Filet de Turbot" -->
+            <article class="c_section-plats__article">
+                <h3>Filet de Turbot</h3>
+                <div class="c_section-plats__article__div-description">
+                    <p>Aux agrumes</p>
+                    <p>44€</p>
+                    <button class="c_button-choisir"><i class="fas fa-check"></i></button>          <!-- Picto "Coche" -->
+                </div>
+            </article>
+        </section> <!-- "c_section-plats" -->
+
+        <!--  <section> DESSERTS du restaurant ********************************************************************* -->
+        <!-- DESSERTS du restaurant -->
+        <section class="c_section-desserts"> 
+            <h3 class ="c_section-desserts__h">DESSERTS</h3>    
+
+            <!-- "Paris-Brest" -->
+            <article class="c_section-desserts__article">
+                <h3>Paris-Brest</h3>
+                <div class="c_section-desserts__article__div-description">
+                    <p>Revisité</p>
+                    <p>18€</p>
+                    <button class="c_button-choisir"><i class="fas fa-check"></i></button>          <!-- Picto "Coche" -->
+                </div>
+            </article>
+
+            <!-- "Macaron au chocolat d'exception" -->
+            <article class="c_section-desserts__article">
+                <h3>Macaron au chocolat d'exception</h3>
+                <div class="c_section-desserts__article__div-description">
+                    <p>Et glace à la vanille de Madagascar</p>
+                    <p>22€</p>
+                    <button class="c_button-choisir"><i class="fas fa-check"></i></button>          <!-- Picto "Coche" -->
+                </div>
+            </article>
+
+            <!-- "Mousse au chocolat" -->
+            <article class="c_section-desserts__article">
+                <h3>Mousse au chocolat</h3>
+                <div class="c_section-desserts__article__div-description">
+                    <p>Au piment d'espelette et à la truffe noire</p>
+                    <p>23€</p>
+                    <button class="c_button-choisir"><i class="fas fa-check"></i></button>          <!-- Picto "Coche" -->
+                </div>
+            </article>
+        </section> <!-- "c_section-desserts" -->
+
+        <!-- button "Commander" ********************************************** -->
+        <button class="c_button-explorer-ou-commander">Commander</button>
+
+    </section> <!-- "c_section-menu" -->
+
+</main>
+
+<!-- Footer (identique sur toutes les pages du SITE) ****************************************************************************** -->
+<footer>
+    <!-- <img src="./images/logo/ohmyfood.png" alt="logo ohmyfood"> -->
+    <h2>ohmyfood</h2>
+    <ul>
+        <li>               
+            <i class="fas fa-utensils"></i>                             <!-- Picto "Ustensiles" -->
+            <a class="c_footer__a-restaurant" href="#">Proposer un restaurant</a>
+        </li>
+        <li>    
+            <i class="fas fa-hands-helping"></i>                        <!-- Picto "2 Mains" -->
+            <a class="c_footer__a-partenaire" href="#">Devenir partenaire</a>
+        </li>
+        <li>
+            <a href="#">Mentions légales</a>
+        </li>
+        <li>
+            <address>
+              <a href="mailto:contact@ohmyfood.com"> Contact </a>
+            </address>
+        </li>
+    </ul>
+</footer>
+
+</body>
+
+</html>
