@@ -1,0 +1,96 @@
+/* Importer 3 polices (dans le fichier CSS => importation unique)
+  - Logo et titres: Shrikhand
+  - Texte: Roboto
+  - Picto : font-awesome
+*/
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap");
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css');
+
+/* Déclaration des variables -----------------------------------------------------------------  */
+:root {
+  /* Couleurs (de la charte) ------------------------------------------------------------------ */
+  --couleur_violet: #9356DC;
+  --couleur_rose: #FF79DA;
+  --couleur_vert: #99E2D0;
+
+  /* couleurs (implicites de la charte) : Noir, Blanc, Gris */
+  --couleur_noir: #000000;
+  --couleur_blanc: #FFFFFF;
+  --couleur_gris: #F2F2F2;
+}
+
+
+body {
+  font-family: "roboto", sans-serif;
+}
+
+
+/* <footer> -------------------------------------------------------------------------------------------------------------------------- */
+
+/* Pour le <footer> :
+  - mettre le fond en noir
+  - mettre les 2 pictos en blanc
+*/
+footer {
+  background-color: var(--couleur_noir);
+  color:var(--couleur_blanc);
+  width: 100%;
+  padding: 20px 0 20px 0; /* haut ; droit ; bas ; gauche */
+}
+
+footer h2 {
+  color: var(--couleur_blanc);
+  font-style: italic;
+  margin-left: 30px; margin-top: 10px;
+}
+
+/* Pour le <ul> du footer : 
+  - oter les puces
+  - oter la marge interne gauche
+  - poser une marge externe gauche de 15px 
+*/
+footer ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-left: 15px;
+}
+
+/* Pour chaque <li> :
+  - poser une marge interne gauche de 15px
+  - espacer les éléments sur la verticale 
+*/
+footer ul li {
+  margin-left: 15px;
+  line-height: 20px;
+}
+
+/* Pour chaque <a> : 
+  - oter la décoration (i.e soulignement)
+  - mettre en blanc
+*/
+footer ul a {
+  text-decoration: none;
+  color: var(--couleur-blanc);
+}
+
+/* .c_footer__a-restaurant { */
+/* Pour le <a> du 1er <li> : poser une marge externe gauche de 15px
+*/
+footer li:nth-child(1) a {  
+  margin-left: 15px;
+}
+
+/* .c_footer__a-partenaire { */
+/* Pour le <a> du 2eme <li> : poser une marge externe gauche de 8px
+*/
+footer li:nth-child(2) a {
+
+  margin-left: 8px;
+}
+
+/* Pour la balise <address> "Nous contacter" : passage d'italic (par défaut) à normal */
+footer address {
+  font-style: normal;
+}
+/* fin du <footer> --------------------------------------------------------------------------------------------------------------------------- */
