@@ -10,20 +10,114 @@
 /* Déclaration des variables -----------------------------------------------------------------  */
 :root {
   /* Couleurs (de la charte) ------------------------------------------------------------------ */
-  --couleur_violet: #9356DC;
+  --couleur_violet: #9356DC;  --couleur_violet_clair:#f6ebff;
   --couleur_rose: #FF79DA;
   --couleur_vert: #99E2D0;
 
   /* couleurs (implicites de la charte) : Noir, Blanc, Gris */
   --couleur_noir: #000000;
   --couleur_blanc: #FFFFFF;
-  --couleur_gris: #F2F2F2;
+  --couleur_gris: #F2F2F2; --couleur_gris_fonce :#d9d9d9;
 }
 
 
 body {
   font-family: "roboto", sans-serif;
 }
+
+/* Header ------------------------------------------------------------------------------------ */
+
+/* index.html */
+/* Placer son enfant (i.e l'image) sur une ligne */
+.header-index {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 70px;
+  margin-top: 30px;
+}
+
+/* (index.html)
+/*  - Placer ses enfants (i.e. picto "localisation" & <p> ) en Ligne 
+    - les centrer
+    - tailler sa hauteur sur 50px
+    - mettre le fond en gris
+    - placer 1 bordure top Gris
+*/  
+.div__localisation-restaurants {
+  display: flex; flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  
+  height: 50px; /* 110px - 60px */
+
+  border-top: 5px solid var(--couleur_gris) ;
+  background-color: var(--couleur_gris_fonce);
+  margin-top: 10px; margin-bottom:-10px; padding-bottom:10px;
+}
+
+/* (index.html) <section> "Présentation" ------------------------------------------------------------------------------------------------------------------ */
+/* Pour la section "Présentation" :
+    - placer ses enfants (i.e <h2>, <p> & <button>) en colonne & les centrer
+    - tailler sa hauteur (290px)
+    - mettre le fond en gris
+    - poser les marges internes
+*/ 
+.c_section-presentation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 290px; /* 400px - 110px */
+  padding-left: 20px; padding-right: 20px; padding-bottom: 50px;
+  background-color: var(--couleur_gris);
+  margin-top:0;
+}
+
+.c_section-presentation h2 {  
+  margin: 50px 65px 0px 50px; /* H G B D */ /* H: 160px - 110px ; G: 65px  ; D (375px - 345px) */
+}
+
+/* <button> "Explorer" ou "Commander" ------------------------------------------------------------------------ */
+/* (index.html & les pages html concernant les menus) Boutton "Explorer nos restaurants" ou "Commander" */
+/*
+Pour le bouton "Explorer" ou "Commander" :
+  - mettre le fond en rose
+  - mettre le texte en blanc
+  - mettre un arrondi
+  - oter la bordure
+  - tailler la Police
+  - mettre le curseur en "main"
+*/
+.c_button-explorer-ou-commander {
+  margin-top: 20px; 
+  background: var(--couleur_rose);
+  color: var(--couleur_blanc);
+
+  box-shadow: 10px 10px 20px var(--couleur_gris_fonce);
+  /* décalage x (de l'ombre); décalage y (de l'ombre); épaisseur de l'ombre */
+
+  padding: 20px 50px; /* vertical (1357px - 1337px) ; horizontal (280px - 230px) */
+  border-radius: 80px;
+  border: none; 
+  
+  font-size: 16px;
+  cursor: pointer; 
+}
+
+/* Au survol de la souris: 
+  - mettre le fond Violet 
+  - mettre une ombre Grise
+*/  
+.c_button-explorer-ou-commander:hover {  
+  background: var(--couleur_violet);
+  box-shadow: 20px 20px 20px var(--couleur_gris);
+}
+
+/* Fin <button> "Explorer" ou "Commander" ------------------------------------------------------------------------------ */
+
+
+
 
 
 /* <footer> -------------------------------------------------------------------------------------------------------------------------- */
