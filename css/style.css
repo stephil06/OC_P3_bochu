@@ -12,12 +12,23 @@
   /* Couleurs (de la charte) ------------------------------------------------------------------ */
   --couleur_violet: #9356DC;  --couleur_violet_clair:#f6ebff;
   --couleur_rose: #FF79DA;
-  --couleur_vert: #99E2D0;
+  --couleur_vert: #99E2D0; --couleur_vert_fonce:#006400;
 
   /* couleurs (implicites de la charte) : Noir, Blanc, Gris */
   --couleur_noir: #000000;
   --couleur_blanc: #FFFFFF;
   --couleur_gris: #F2F2F2; --couleur_gris_fonce :#d9d9d9;
+
+  --section-restaurants_marge: 15px;
+}
+
+
+/* Pour toutes les images, à l'exclusion de l'image Logo : 
+    adapter ses dimensions à son conteneur (couvrir la totalité du conteneur en gardant les proportions de l'image) 
+*/
+img:not(.header-index img) {
+  object-fit: cover; 
+  /* border-top: 3px solid yellow; */
 }
 
 
@@ -54,6 +65,11 @@ body {
   border-top: 5px solid var(--couleur_gris) ;
   background-color: var(--couleur_gris_fonce);
   margin-top: 10px; margin-bottom:-10px; padding-bottom:10px;
+}
+
+/* Pour le picto "localisation" : poser une marge interne droite de 20px */ 
+.div__localisation-restaurants .fa-map-marker-alt {
+  padding-right: 20px;
 }
 
 /* (index.html) <section> "Présentation" ------------------------------------------------------------------------------------------------------------------ */
@@ -115,6 +131,127 @@ Pour le bouton "Explorer" ou "Commander" :
 }
 
 /* Fin <button> "Explorer" ou "Commander" ------------------------------------------------------------------------------ */
+
+
+
+/* (index.html) <section> "restaurants" -------------------------------------------------------------------------------------- */
+
+/* - placer ses enfants (i.e <Article>) sur 1 colonne aux extrémités 
+   - tailler sa largeur
+   - mettre le fond Gris
+   - mettre 1 marge interne Haut & Bas de 45px
+*/  
+.c_section-restaurants { 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  background-color: var(--couleur_gris);
+  padding-top: 30px;
+  padding-bottom: 40px;
+}
+
+/* Pour le <h2>: placer une marge externe gauche de 15px */  
+.c_section-restaurants h2 {  
+  margin-left: var(--section-restaurants_marge);
+}
+
+/* Concernant la section restaurants, pour chaque Article: 
+  - mettre ses enfants en colonne (sauf: "Nouveau" & Picto "coeur")
+  - tailler sa hauteur
+  - poser 4 arrondis
+  - poser une ombre noir
+  - poser des marges externes à 15px
+  - poser une position "relative" pour placer ses enfants "Nouveau" &  Picto évaluation ("coeur")
+*/
+.c_section-restaurants__article { 
+  display: flex;
+  flex-direction: column; 
+  height: 250px; /* 1195px - 945px */
+  border-radius: 20px;
+  box-shadow: 2px 2px 12px -11px var(--couleur_noir); 
+  margin: 0 var(--section-restaurants_marge) var(--section-restaurants_marge) var(--section-restaurants_marge); /* haut droit bas gauche */
+  
+  position: relative;
+}
+
+/* Pour chaque <a>: 
+    - oter le soulignement du lien
+    - remplacer le bleu par du noir 
+*/  
+.c_section-restaurants__article a {   
+  text-decoration: none;
+  color: var(--couleur_noir);
+}
+
+/* Pour l'élément "Nouveau": 
+  - tailler sa largeur & sa hauteur
+  - mettre le fond en vert
+  - mettre la couleur du Texte en vert foncé & en Gras
+  - poser des marges internes
+  - centrer son texte
+  - le placer par rapport à son Père (i.e Article) à 15px à droite & à 15px en haut 
+*/
+ .c_section-restaurants__article__div-nouveau {
+  width: 80px; /* 345px - 265px */
+  height: 30px; /* 985px - 955px */
+  background-color: var(--couleur_vert); 
+  color: var(--couleur_vert_fonce); 
+  font-weight: bold;
+  padding: 5px; padding-top: 10px;
+  text-align: center;
+ 
+  position: absolute; /* son Père : Article */
+  right: 15px; /* 15px à droite par rapport à son Père (i.e Article) */
+  top: 15px;  /* 15px en haut par rapport à son Père (i.e Article) */
+}
+
+/* Pour chaque <img>: 
+  - tailler sa largeur à 100%
+  - tailler sa hauteur
+  - poser 2 arrondis en haut 
+*/  
+.c_section-restaurants__article img { 
+  width: 100%;
+  height: 175px; /* 1120px - 845px */
+  border-radius: 20px 20px 0px 0px;
+}
+
+/* Pour la description (i.e <h3> & <p>) :
+  - remonter ses enfants
+  - poser un décalage gauche
+*/
+.c_section-restaurants__article__div-description {
+  line-height: 5px; padding-left: 10px;
+}
+
+/* Pour le Picto évaluation ("coeur") 
+    - tailler sa largeur & sa hauteur
+    - mettre le curseur en forme de "main"
+    - le placer par rapport à son Père (i.e Article) à 10px à droite & 15px en bas
+*/  
+.c_section-restaurants__article__div-evaluation {  
+  width: 45px; 
+  height: 45px;
+  cursor: pointer;
+
+  position: absolute; /* son Père : Article */
+  right: 10px;  /* 10px à droite par rapport à son Père (i.e Article) */
+  bottom: 15px;  /* 5px en Bas par rapport à son Père (i.e Article) */
+}
+
+/* Au survol de la souris sur le Picto coeur : mettre le fond en violet */
+.c_section-restaurants__article__div-evaluation .fa-heart:hover {
+  background-color: var(--couleur_violet);
+}
+
+/* (index.html) fin <section> "restaurants" ---------------------------------------------------------------------- */
+
+
+
+
+
+
 
 
 
