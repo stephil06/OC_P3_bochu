@@ -123,16 +123,116 @@ Pour le bouton "Explorer" ou "Commander" :
 
 /* Au survol de la souris: 
   - mettre le fond Violet 
-  - mettre une ombre Grise
 */  
 .c_button-explorer-ou-commander:hover {  
   background: var(--couleur_violet);
-  box-shadow: 20px 20px 20px var(--couleur_gris);
 }
 
 /* Fin <button> "Explorer" ou "Commander" ------------------------------------------------------------------------------ */
 
 
+
+
+/* (index.html) <nav> "Fonctionnement" ---------------------------------------------------------------------------- */
+/* placer la <nav> :
+  - marge externe Haute de 55px
+  - marge externe Bas de 65px
+*/
+.c_nav-index {
+  margin: 55px 0 65px 0; /* H  D B  G */ /* H (455px - 400px)  B (840px - 775px) */
+}
+
+/* Pour la <nav> : placer le <h2> avec une marge gauche de 15px */
+.c_nav-index h2 {
+  margin-left: var(--section-restaurants_marge); /* 15px; */
+}
+
+/* Pour le <ol> : 
+    - placer ses enfants (i.e <li>) en colonne avec un gap de 20px
+    - oter la marge interne gauche
+*/
+.c_nav-index ol {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px; /* 600px - 580px */
+  padding-left: 0;
+}
+
+/* Pour chaque <li> :
+    - placer ses enfants (i.e Picto & libellé) en ligne & les centrer par rapport à l'axe vertical
+    - mettre le fond gris
+    - mettre les arrondis
+    - mettre une ombre grise
+    - tailler sa largeur & sa hauteur
+*/
+.c_nav-index ol li {
+  display: flex;
+  flex-direction: row; justify-content: flex-start;
+  align-items: center;
+
+  background: var(--couleur_gris);
+  border-radius: 20px;
+  box-shadow: 10px 10px 20px var(--couleur_gris);  /* décalage x (de l'ombre); décalage y (de l'ombre); épaisseur de l'ombre */
+
+  width: 90%; /* 90%; */
+  height: 70px; /* 770px - 700px */
+}
+
+/* Sur chaque <li>, au survol de la souris: mettre le fond violet clair
+*/
+.c_nav-index ol li:hover {
+  background: var(--couleur_violet_clair);
+}
+
+/* Pour chaque Picto:
+  - mettre 1 marge interne Gauche & Droite à resp. 15px & 10px 
+*/
+.c_nav-index ol li .fa-tablet-alt,
+.c_nav-index ol li .fa-list-ul,
+.c_nav-index ol li .fa-store 
+{
+  padding-left: 15px; padding-right: 10px; /* background-color: red; */
+}
+
+.c_nav-index ol li .fa-tablet-alt 
+{
+  padding-left: 15px; padding-right: 11px; /* background-color: red; */
+}
+
+.c_nav-index ol li .fa-list-ul {
+   padding-left: 10px; 
+}
+
+.c_nav-index__span-composez { 
+  margin-left: -12px; /* background-color: white; */
+}
+
+/* Sur chaque <li>, au survol de la souris: mettre son Picto en violet */
+.c_nav-index ol li:hover .fa-tablet-alt,
+.c_nav-index ol li:hover .fa-list-ul,
+.c_nav-index ol li:hover .fa-store 
+{
+  color: var(--couleur_violet); /* red; TEST */
+}
+
+/* Pour chaque <a> (de <nav>) :
+    - placer ses enfants (i.e Picto & libellé) en ligne & aux extrémités
+    - tailler sa Largeur
+    - oter le soulignement
+    - mettre le Picto & libellé en noir & en gras
+*/
+.c_nav-index ol li a {
+  display: flex; flex-direction: row;
+  justify-content: space-around;
+  width: 50%; /* 250px; */ /* pour rendre elastic */
+
+  text-decoration: none;
+  color: var(--couleur_noir);
+  font-weight: bold;
+}
+/* (index.html) Fin de <nav> ---------------------------------------------------------------------------------------------------------- */
 
 /* (index.html) <section> "restaurants" -------------------------------------------------------------------------------------- */
 
@@ -246,15 +346,6 @@ Pour le bouton "Explorer" ou "Commander" :
 }
 
 /* (index.html) fin <section> "restaurants" ---------------------------------------------------------------------- */
-
-
-
-
-
-
-
-
-
 
 
 /* <footer> -------------------------------------------------------------------------------------------------------------------------- */
