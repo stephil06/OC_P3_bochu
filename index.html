@@ -26,14 +26,13 @@
 
 <body>
   <!-- Nommage des classes selon la règle "BEM" : c_B__E-modificateur (Bloc__Element-modificateur) -->
-
-    <main>
         
         <!-- <header> ******************************************************************************* -->
         <header class="header-index">
             <img src="./images/logo/ohmyfood.png" alt="Logo de la société Ohmyfood">
         </header>
-        
+    <main>
+
         <!-- <div> Localisation des restaurants **************************************************** -->
         <div class="div__localisation-restaurants">    
             <i class="fas fa-map-marker-alt"></i> <!-- picto "localisation" --> 
@@ -47,26 +46,31 @@
             <button class="c_button-explorer-ou-commander">Explorer nos restaurants</button>
         </section>
 
-        <!-- <nav> "Fonctionnement" ***************************************************************** -->  
-        <nav class="c_nav-index">
+        <!-- <section> "Fonctionnement" ************************************************************ -->
+        <!-- <nav class="c_nav-index"> -->
+        <section class="c_section-fonctionnement">
           <h2>Fonctionnement</h2>
           <ol>
-              <li>
-                <a href="#">
-                  <i class="fas fa-tablet-alt"><span class= "c_nav-index__span-choisissez"></i>Choisissez un restaurant</span>    <!-- picto "Tablette" -->
-                </a>
-              </li>
-              <li><a href="#">
-                <i class="fas fa-list-ul"></i><span class= "c_nav-index__span-composez">Composez votre menu</span>             <!-- picto "Liste" -->
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i class="fas fa-store"></i><span class= "c_nav-index__span-degustez">Dégustez au restaurant</span>          <!-- picto "Boutique" -->
-                </a>
-              </li>
+            <li>
+              <a href="#">
+                <!-- picto "Tablette" -->
+                <i class="fas fa-tablet-alt"></i><span class="c_section-fonctionnement__span-choisissez">Choisissez un restaurant</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <!-- picto "Liste" -->
+                <i class="fas fa-list-ul"></i><span class="c_section-fonctionnement__span-composez">Composez votre menu</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <!-- picto "Boutique" -->
+                <i class="fas fa-store"></i><span class="c_section-fonctionnement__span-degustez">Dégustez au restaurant</span>
+              </a>
+            </li>
           </ol>
-        </nav>
+        </section>
 
         <!-- <section> "Restaurants" ********************************************************************** -->
         <section class="c_section-restaurants">
@@ -147,6 +151,7 @@
         </section>
         <!-- fin de <SECTION> "Restaurants" -->
 
+        </main>
         <!-- <footer> (identique sur toutes les pages du SITE) ************************************************************************* -->
         <footer>
           <!-- <img src="./images/logo/ohmyfood.png" alt="logo ohmyfood"> -->
@@ -171,7 +176,6 @@
           </ul>
       </footer>
       
-    </main>
 </body>
 
 </html>
