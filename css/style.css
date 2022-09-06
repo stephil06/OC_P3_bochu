@@ -225,6 +225,7 @@ Pour le bouton "Explorer" ou "Commander":
   - mettre les arrondis
   - mettre une ombre grise
   - tailler sa largeur & sa hauteur
+  - incrementer le <li>
 */
 .c_section-fonctionnement ol li {
   display: flex;
@@ -241,6 +242,7 @@ Pour le bouton "Explorer" ou "Commander":
   /* 90%; */
   height: 70px;
   /* 770px - 700px */
+  counter-increment: li;
 }
 
 /* Sur chaque <li>, au survol de la souris: mettre le fond violet clair
@@ -282,6 +284,32 @@ Pour le bouton "Explorer" ou "Commander":
   color: var(--couleur_primaire);
   /* red; TEST */
 }
+
+/* Avant le <li> (de <section>), créer du contenu  :
+    - le contenu prend la valeur du compteur de <li>
+    - faire le cercle de diamètre 20px (cf Projet2)
+    - mettre le fond en violet & le numéro en Blanc
+    - poser une marge externe gauche de -10px (pour décaler à gauche)
+*/
+.c_section-fonctionnement ol li:before {
+  content: counter(li);
+  /* cf. Projet2 remplacement du Picto evaluation */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* pour centrer le compteur */
+  border-radius: 50%;
+  /* cercle */
+  /* diametre du cercle (40px - 20px) */
+  width: 20px;
+  height: 20px;
+
+  background-color: var(--couleur_primaire);
+  color: var(--couleur_0);
+
+  margin-left: -10px;
+}
+
 
 /* Pour chaque <a> (de <section>) :
     - placer ses enfants (i.e Picto & libellé) en ligne & aux extrémités
