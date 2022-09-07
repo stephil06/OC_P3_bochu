@@ -595,3 +595,62 @@ footer address {
   font-style: italic;
   font-weight: bold;
 }
+
+/* Concernant les sections "ENTREES", "PLATS", "DESSERTS", pour chaque titre <h3>:
+  - poser 1 marge externe Gauche de 20px
+  - retirer le Gras
+  - mettre une bordure verte de largeur 45px, & au-dessous de 10px
+*/
+.c_section-entrees h3,
+.c_section-plats h3,
+.c_section-desserts h3 {
+  margin-left: 20px;
+  font-weight: normal;
+  border-bottom: solid 3px var(--couleur_tertiaire);
+  width: 45px;
+  padding-bottom: 10px;
+}
+
+/* Concernant les sections "ENTREES", "PLATS", "DESSERTS", pour chaque <article>: 
+  - mettre le fond en Blanc
+  - tailler sa hauteur
+  - poser 4 arrondis
+  - poser les marges externes
+*/
+.c_section-entrees__article,
+.c_section-plats__article,
+.c_section-desserts__article {
+  background-color: var(--couleur_0);
+  height: 75px;
+  /* 495px - 420px */
+  border-radius: 20px;
+  margin: 15px 15px 0 15px;
+  /* H D B G */
+
+  position: relative;
+}
+
+/* Concernant les Articles des sections "ENTREES", "PLATS", "DESSERTS", pour chaque titre <h4>:
+    - tailler la police
+    - poser 1 marge externe Gauche de 15px
+    - poser une marge externe Bas de -5px
+*/
+.c_section-entrees__article h4,
+.c_section-plats__article h4,
+.c_section-desserts__article h4 {
+  font-size: 16px;
+  margin-left: 15px;
+  line-height: 1.8;
+}
+
+/*  Concernant les Articles des sections "ENTREES", "PLATS", "DESSERTS", pour chaque Description (i.e <p> & button): 
+    - mettre ses enfants en Ligne & aux extrémités
+*/
+.c_section-entrees__article__div-description,
+.c_section-plats__article__div-description,
+.c_section-desserts__article__div-description {
+  display: flex;
+  justify-content: space-between;
+  margin: -30px 20px 0 15px;
+  /* haut | droit | bas | gauche */
+}
