@@ -541,3 +541,57 @@ footer address {
 }
 
 /* fin du <footer> --------------------------------------------------------------------------------------------------------------------------- */
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------- */
+/* ------------------------------------------------------- (4 pages menu) -------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* Concernant la photo du restaurant: 
+  - tailler sa largeur
+  - tailler sa hauteur
+  - la décaler vers le haut (de 200px) par rapport à son Père (i.e "c_section-menu")
+*/
+.c_img-menu {
+  width: 100%;
+  height: 250px;
+  /* 310px - 60px */
+
+  position: absolute;
+  margin-top: -200px;
+}
+
+/* <section> "menu" ---------------------------------------------------------------------------------------------- */
+
+/* Pour la <section> "menu": 
+    - mettre le fond en gris
+    - tailler sa largeur
+    - poser 2 arrondis Haut
+    - la placer à 220px de Hauteur
+    - poser 1 marge interne Bas (de 155px)
+*/
+.c_section-menu {
+  background-color: var(--couleur_2);
+  width: 100%;
+  border-radius: 40px 40px 0px 0px;
+  margin-top: 220px;
+  /* 285px - 65px */
+
+  position: relative;
+  padding-bottom: 155px;
+  /* 1445px - 1290px */
+}
+
+/* - placer ses enfants (i.e. <h> & Picto "coeur") aux extrémités
+  - poser 1 marge interne Haute (de 10px)
+  - mettre en Italic & gras
+*/
+.c_section-menu__div-h-et-picto {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+  margin: 25px 35px 15px 20px;
+  /* haut | droit | bas | gauche */
+  font-style: italic;
+  font-weight: bold;
+}
