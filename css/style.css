@@ -32,6 +32,10 @@
   --section-restaurants_marge: 15px;
 }
 
+/* --------------------------------------------------------------------------------------------- */
+/* ------ MOBILE FIRST ------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------------------------- */
+
 
 /* Pour toutes les images: 
     adapter ses dimensions à son conteneur (couvrir la totalité du conteneur en gardant les proportions de l'image) 
@@ -703,3 +707,90 @@ cf. https://www.alsacreations.com/article/lire/539-Centrer-les-elements-ou-un-si
   transform: translate(-50%, -50%);
   /* décalage de 50% de sa propre taille */
 }
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------- */
+/* ------------------------------------------------------- (MEDIAQUERIES) -------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* NB : Les breakpoints non précisés dans le Cahier des Charges => Hypothèse : pris ceux du Projet2 */
+
+/* @media TABLETTE ------------------------------------------------------------------------------------------- */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  
+  /* --------------------------------------------------------------------------------------------- */
+  /* ------ Page ACCUEIL index.html -------------------------------------------------------------- */
+  /* --------------------------------------------------------------------------------------------- */
+
+  /* Concernant la section "Présentation": réduire sa marge interne Bas */
+  .c_section-presentation {
+    padding-bottom: 0;
+  }
+
+  /* <section> "Fonctionnement" ----------------------------------------------------------- */
+
+  /* Centrer son titre */
+  .c_section-fonctionnement h2 {
+    text-align: center;
+  }
+
+  /* placer ses enfants (de space-between à space-arround) i.e avec des marges aux extrémités */
+  .c_section-fonctionnement ol {
+    justify-content: space-around;
+    /* background-color: green; TEST */
+  }
+
+  /* Pour chaque <li>: 
+    - réduire sa Largeur à 75% 
+    - tailler sa font  
+  */
+  .c_section-fonctionnement ol li {
+    width: 75%;
+    font-size: 20px;
+  }
+
+  /* Pour chaque <li> (i.e Picto & libellé): tailler sa Largeur à 75% */
+  .c_section-fonctionnement ol li a {
+    width: 75%;
+  }
+
+  /* <section> "Restaurants" ---------------------------------------------------------------- */
+  
+  /* Centrer son titre */
+  .c_section-restaurants h2 {
+    text-align: center;
+  }
+
+  /* Pour chaque Article: réduire sa Largeur à 75% & centrer */
+  .c_section-restaurants__article {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* <footer> --------------------------------------------------------------------------------- */
+  /* Concernant le <footer>: centrer son titre */
+  footer h2 {
+    display: block;
+    margin: auto;
+    width: 100px;
+    /* 125px - 25px */
+  }
+
+  /* Concernant le <footer>: 
+  - placer ses enfants en Ligne & aux extrémités 
+  - tailler leur font
+  */
+  footer ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 20px;
+  }
+
+  /* --------------------------------------------------------------------------------------------- */
+  /* ------ Pages MENU --------------------------------------------------------------------------- */
+  /* --------------------------------------------------------------------------------------------- */
+
+}
+
+/* fin @media TABLETTE ------------------------------------------------------------------------------------------- */
