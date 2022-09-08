@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <!-- validateur OK -->
+    <meta charset="utf-8"><!-- jeu de caractères pour passer au validateur W3C -->
+
+    <!-- Responsive : la largeur de la page du site correspond à la largeur de l'écran du visiteur -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>À la française</title>
+
+    <!-- ajouter une favicon (créée via le site : https://www.xiconeditor.com/) à partir d'une image (droit d'utilisation OK) taillée en carré -->
+    <link rel="shortcut icon" type="image/x-icon" href="./images/favicon/ohmyfood.ico">
+
+    <!-- Fichier CSS pour "Font Awesome" (police de caractères pour afficher des icônes= picto) via CDN (dernière version) -->
+    <!-- version 5.* (la version gratuite) -->
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet"> -->
+
+    <!-- importer "normalize.css" téléchargé depuis https://github.com/necolas/normalize.css -->
+    <!-- la normalisation du CSS consiste à réajuster tous les styles par défaut des navigateurs afin d'éviter les différences majeurs 
+        de styles et de positionnement -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- Fichier CSS en local -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Nommage des classes selon la règle "BEM" : c_B__E-modificateur (Bloc__Element-modificateur) -->
+
+    <!-- Header (identique sur toutes les pages du MENU) ************************************************************************ -->
+    <header>
+        <a href="./index.html">
+            <!-- Picto "flèche gauche" -->
+            <i class="fas fa-arrow-left"></i>
+        </a>
+        <!-- Mettre le Logo en texte et pas en image -->
+        <h1>ohmyfood</h1>
+    </header>
+
+    <!-- <main> ****************************************************************************************************************** -->
+    <main>
+
+        <!-- Photo du restaurant -->
+        <img class="c_img-menu" src="./images/restaurants/a-la-francaise.jpg" alt="À la française">
+
+        <!-- <section> MENU du restaurant ************************************************************************* -->
+        <section class="c_section-menu">
+            <div class="c_section-menu__div-h-et-picto">
+                <h2>À la française</h2>
+                <i class="far fa-heart fa-2x"></i> <!-- Picto "Coeur vide" -->
+            </div>
+
+            <!--  <section> ENTREES du restaurant ********************************************************************* -->
+            <section class="c_section-entrees">
+                <h3>ENTRÉES</h3>
+
+                <!-- "Tartare de poulpe acidulé" -->
+                <article class="c_section-entrees__article">
+                    <h4>Tartare de poulpe acidulé</h4>
+                    <div class="c_section-entrees__article__div-description">
+                        <p>Aux zestes d'orange</p>
+                        <p>25€</p>
+                        <!-- Picto "Coche encerclée" -->
+                        <button class="c_button-choisir"><i class="fas fa-check-circle"></i></button>
+                    </div>
+                </article>
+
+                <!-- "Velouté de légumes d'antan" -->
+                <article class="c_section-entrees__article">
+                    <h4>Velouté de légumes d'antan</h4>
+                    <div class="c_section-entrees__article__div-description">
+                        <p>Carotte, panais, topinambour</p>
+                        <p>35€</p>
+                        <!-- Picto "Coche encerclée" -->
+                        <button class="c_button-choisir"><i class="fas fa-check-circle"></i></button>
+                    </div>
+                </article>
+
+                <!-- "Soupe à l'oignon" -->
+                <article class="c_section-entrees__article">
+                    <h4>Soupe à l'oignon</h4>
+                    <div class="c_section-entrees__article__div-description">
+                        <p>Revisitée</p>
+                        <p>20€</p>
+                        <!-- Picto "Coche encerclée" -->
+                        <button class="c_button-choisir c_button-choisir--visible"><i class="fas fa-check-circle"></i></button>
+                    </div>
+                </article>
+            </section> <!-- "c_section-entrees" -->
+
+            <!--  <section> PLATS du restaurant ********************************************************************* -->
+            <section class="c_section-plats">
+                <h3>PLATS</h3>
+
+                <!-- "Coquilles Saint-Jacques" -->
+                <article class="c_section-plats__article">
+                    <h4>Coquilles Saint-Jacques</h4>
+                    <div class="c_section-plats__article__div-description">
+                        <p class="c_p-debut">Accompagnées d'une purée de panais</p>
+                        <p>40€</p>
+                        <!-- Picto "Coche encerclée" -->
+                        <button class="c_button-choisir"><i class="fas fa-check-circle"></i></button>
+                    </div>
+                </article>
+
+                <!-- "Magret de canard" -->
+                <article class="c_section-plats__article">
+                    <h4>Magret de canard</h4>
+                    <div class="c_section-plats__article__div-description">
+                        <p>Et parmentier de pommes de terre</p>
+                        <p>35€</p>
+                        <!-- Picto "Coche encerclée" -->
+                        <button class="c_button-choisir"><i class="fas fa-check-circle"></i></button>
+                    </div>
+                </article>
+
+                <!-- "Pigeonneau d’Ille-et-Vilaine" -->
+                <article class="c_section-plats__article">
+                    <h4>Pigeonneau d’Ille-et-Vilaine</h4>
+                    <div class="c_section-plats__article__div-description">
+                        <p>Sur son lit de gnocchis aux légumes</p>
+                        <p>44€</p>
+                        <!-- Picto "Coche encerclée" -->
+                        <button class="c_button-choisir"><i class="fas fa-check-circle"></i></button>
+                    </div>
+                </article>
+            </section> <!-- "c_section-plats" -->
+
+            <!--  <section> DESSERTS du restaurant ********************************************************************* -->
+            <section class="c_section-desserts">
+                <h3>DESSERTS</h3>
+
+                <!-- "Pétales de violettes glacés" -->
+                <article class="c_section-desserts__article">
+                    <h4>Pétales de violettes glacés</h4>
+                    <div class="c_section-desserts__article__div-description">
+                        <p>Et purée de noisettes</p>
+                        <p>18€</p>
+                        <!-- Picto "Coche encerclée" -->
+                        <button class="c_button-choisir"><i class="fas fa-check-circle"></i></button>
+                    </div>
+                </article>
+
+                <!-- "Fondant au chocolat" -->
+                <article class="c_section-desserts__article">
+                    <h4>Fondant au chocolat</h4>
+                    <div class="c_section-desserts__article__div-description">
+                        <p>Revisité</p>
+                        <p>22€</p>
+                        <!-- Picto "Coche encerclée" -->
+                        <button class="c_button-choisir"><i class="fas fa-check-circle"></i></button>
+                    </div>
+                </article>
+
+                <!-- "Millefeuille croustillant" -->
+                <article class="c_section-desserts__article">
+                    <h4>Millefeuille croustillant</h4>
+                    <div class="c_section-desserts__article__div-description">
+                        <p>Myrtilles et pâte d’amande</p>
+                        <p>23€</p>
+                        <!-- Picto "Coche encerclée" -->
+                        <button class="c_button-choisir"><i class="fas fa-check-circle"></i></button>
+                    </div>
+                </article>
+            </section> <!-- "c_section-desserts" -->
+
+            <!-- button "Commander" ********************************************** -->
+            <!-- NB: Même style que le bouton "Explorer" (de la page index.html), seul son placement diffère -->
+            <button class="c_button-explorer-ou-commander c_button-explorer-ou-commander--placer">Commander</button>
+        </section> <!-- "c_section-menu" -->
+
+    </main>
+
+    <!-- Footer (identique sur toutes les pages du SITE) ****************************************************************************** -->
+    <footer>
+        <h2>ohmyfood</h2>
+        <ul>
+            <li>
+                <i class="fas fa-utensils"></i> <!-- Picto "Ustensiles" -->
+                <a class="c_footer__a-restaurant" href="#">Proposer un restaurant</a>
+            </li>
+            <li>
+                <i class="fas fa-hands-helping"></i> <!-- Picto "2 Mains" -->
+                <a class="c_footer__a-partenaire" href="#">Devenir partenaire</a>
+            </li>
+            <li>
+                <a href="#">Mentions légales</a>
+            </li>
+            <li>
+                <address>
+                    <a href="mailto:contact@ohmyfood.com"> Contact </a>
+                </address>
+            </li>
+        </ul>
+    </footer>
+
+</body>
+
+</html>
