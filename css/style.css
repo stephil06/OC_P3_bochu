@@ -654,3 +654,39 @@ footer address {
   margin: -30px 20px 0 15px;
   /* haut | droit | bas | gauche */
 }
+
+/* Pour le bouton "choisir": 
+  - mettre le fond en Vert
+  - tailler sa Largeur & sa Hauteur
+  - poser 2 arrondis à droite (Haut & Bas)
+  - oter la bordure
+  - par rapport à son Père (i.e c_section-...__article): poser un top & right à 0
+  - mettre le curseur en forme de "main"
+*/
+.c_button-choisir {
+  display: none;
+  background-color: var(--couleur_tertiaire);
+  width: 60px;
+  /* 365px - 305px */
+  height: 100%;
+
+  border-radius: 0 20px 20px 0;
+  /* H D B G */
+  border: none;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+/* Mettre le cercle en Blanc & tailler sa Font */
+.fa-check-circle {
+  color: var(--couleur_0);
+  font-size: 20px;
+}
+
+/* Rendre visible le bouton "choisir" */
+.c_button-choisir--visible {
+  display: block;
+}
