@@ -42,13 +42,15 @@
       <p>Paris, Belleville</p>
     </div>
 
+    
     <!-- <section> "Présentation" ************************************************************** -->
     <section class="c_section-presentation">
       <h2>Réservez le menu qui vous convient</h2>
       <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
       <button class="c_button-explorer-ou-commander">Explorer nos restaurants</button>
     </section>
-
+    
+    <div class="div-fonctionnement-et-restaurants"> <!-- pour le RWD ordinateur -->
     <!-- <section> "Fonctionnement" *********************************************************** -->
     <section class="c_section-fonctionnement">
       <h2>Fonctionnement</h2>
@@ -78,68 +80,78 @@
     <section class="c_section-restaurants">
       <h2>Restaurants</h2>
 
-      <!-- "La Palette du goût" -->
-      <article class="c_section-restaurants__article">
-        <a href="la-palette-du-gout.html">
-          <img src="./images/restaurants/la-palette-du-gout.jpg" alt="plat du menu du restaurant La palette du goût"
-            title="restaurant La palette du goût">
-          <!-- <div class="c_section-restaurants__article__div-nouveau">Nouveau</div> -->
-          <span class="c_section-restaurants__article__span-nouveau">Nouveau</span>
+      <!-- pour le RWD ordinateur -->
+      <div class="c_section-restaurants__div-duo-haut">
+        <!-- "La Palette du goût" -->
+        <article class="c_section-restaurants__article">
+          <a href="la-palette-du-gout.html">
+            <img src="./images/restaurants/la-palette-du-gout.jpg" alt="plat du menu du restaurant La palette du goût"
+              title="restaurant La palette du goût">
+            <!-- <div class="c_section-restaurants__article__div-nouveau">Nouveau</div> -->
+            <span class="c_section-restaurants__article__span-nouveau">Nouveau</span>
 
-          <div class="c_section-restaurants__article__div-description">
-            <h3>La Palette du goût</h3>
-            <p>Ménilmontant</p>
-            <!-- Picto "Coeur vide" -->
-            <!-- far: vide (// fas: plein); fa-2x: le double  -->
-            <i class="far fa-heart fa-2x"></i>
-          </div>
-        </a>
-      </article>
+            <div class="c_section-restaurants__article__div-description">
+              <h3>La Palette du goût</h3>
+              <p>Ménilmontant</p>
+              <!-- Picto "Coeur vide" -->
+              <!-- far: vide (// fas: plein); fa-2x: le double  -->
+              <i class="far fa-heart fa-2x"></i>
+            </div>
+          </a>
+        </article>
 
-      <!-- "La note enchantée" -->
-      <article class="c_section-restaurants__article">
-        <a href="la-note-enchantee.html">
-          <img src="./images/restaurants/la-note-enchantee.jpg" alt="plat du menu du restaurant La note enchantée"
-            title="restaurant La note enchantée">
-          <span class="c_section-restaurants__article__span-nouveau">Nouveau</span>
-          <div class="c_section-restaurants__article__div-description">
-            <h3>La note enchantée</h3>
-            <p>Charonne</p>
-            <!-- picto "coeur plein" -->
-            <i class="fas fa-heart fa-2x"></i>
-          </div>
-        </a>
-      </article>
+        <!-- "La note enchantée" -->
+        <article class="c_section-restaurants__article">
+          <a href="la-note-enchantee.html">
+            <img src="./images/restaurants/la-note-enchantee.jpg" alt="plat du menu du restaurant La note enchantée"
+              title="restaurant La note enchantée">
+            <span class="c_section-restaurants__article__span-nouveau">Nouveau</span>
+            <div class="c_section-restaurants__article__div-description">
+              <h3>La note enchantée</h3>
+              <p>Charonne</p>
+              <!-- picto "coeur plein" -->
+              <i class="fas fa-heart fa-2x"></i>
+            </div>
+          </a>
+        </article>
+      </div> <!-- pour le RWD ordinateur -->
 
-      <!-- "À la française" -->
-      <article class="c_section-restaurants__article">
-        <a href="a-la-francaise.html">
-          <img src="./images/restaurants/a-la-francaise.jpg" alt="plat du menu du restaurant À la française"
-            title="restaurant À la française">
-          <div class="c_section-restaurants__article__div-description">
-            <h3>À la française</h3>
-            <p>Cité Rouge</p>
-            <!-- Picto "Coeur vide" -->
-            <i class="far fa-heart fa-2x"></i>
-          </div>
-        </a>
-      </article>
+      <div class="c_section-restaurants__div-duo-bas">
+        <!-- pour le RWD ordinateur -->
 
-      <!-- "Le délice des sens" -->
-      <article class="c_section-restaurants__article">
-        <a href="le-delice-des-sens.html">
-          <img src="./images/restaurants/le-delice-des-sens.jpg" alt="plat du menu du restaurant Le délice des sens"
-            title="restaurant Le délice des sens">
-          <div class="c_section-restaurants__article__div-description">
-            <h3>Le délice des sens</h3>
-            <p>Folie-Méricourt</p>
-            <!-- Picto "Coeur vide" -->
-            <i class="far fa-heart fa-2x"></i>
-          </div>
-        </a>
-      </article>
+        <!-- "À la française" -->
+        <article class="c_section-restaurants__article">
+          <a href="a-la-francaise.html">
+            <img src="./images/restaurants/a-la-francaise.jpg" alt="plat du menu du restaurant À la française"
+              title="restaurant À la française">
+            <div class="c_section-restaurants__article__div-description">
+              <h3>À la française</h3>
+              <p>Cité Rouge</p>
+              <!-- Picto "Coeur vide" -->
+              <i class="far fa-heart fa-2x"></i>
+            </div>
+          </a>
+        </article>
+
+        <!-- "Le délice des sens" -->
+        <article class="c_section-restaurants__article">
+          <a href="le-delice-des-sens.html">
+            <img src="./images/restaurants/le-delice-des-sens.jpg" alt="plat du menu du restaurant Le délice des sens"
+              title="restaurant Le délice des sens">
+            <div class="c_section-restaurants__article__div-description">
+              <h3>Le délice des sens</h3>
+              <p>Folie-Méricourt</p>
+              <!-- Picto "Coeur vide" -->
+              <i class="far fa-heart fa-2x"></i>
+            </div>
+          </a>
+        </article>
+      </div>
+      <!-- pour le RWD ordinateur -->
+
     </section>
     <!-- fin de <SECTION> "Restaurants" -->
+    </div> <!-- class="div-fonctionnement-et-restaurants"> --> <!-- pour le RWD ordinateur -->
 
   </main>
   <!-- <footer> (identique sur toutes les pages du SITE) ************************************************************************* -->

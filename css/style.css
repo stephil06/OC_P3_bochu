@@ -716,7 +716,7 @@ cf. https://www.alsacreations.com/article/lire/539-Centrer-les-elements-ou-un-si
 
 /* @media TABLETTE ------------------------------------------------------------------------------------------- */
 @media screen and (min-width: 768px) and (max-width: 991px) {
-  
+
   /* --------------------------------------------------------------------------------------------- */
   /* ------ Page ACCUEIL index.html -------------------------------------------------------------- */
   /* --------------------------------------------------------------------------------------------- */
@@ -754,7 +754,7 @@ cf. https://www.alsacreations.com/article/lire/539-Centrer-les-elements-ou-un-si
   }
 
   /* <section> "Restaurants" ---------------------------------------------------------------- */
-  
+
   /* Centrer son titre */
   .c_section-restaurants h2 {
     text-align: center;
@@ -794,3 +794,145 @@ cf. https://www.alsacreations.com/article/lire/539-Centrer-les-elements-ou-un-si
 }
 
 /* fin @media TABLETTE ------------------------------------------------------------------------------------------- */
+
+/* @media ORDINATEUR --------------------------------------------------------------------------------------------- */
+@media screen and (min-width: 992px) {
+
+  /* --------------------------------------------------------------------------------------------- */
+  /* ------ Page ACCUEIL index.html -------------------------------------------------------------- */
+  /* --------------------------------------------------------------------------------------------- */
+
+  /* Concernant la section "Présentation": réduire sa marge interne Bas */
+  .c_section-presentation {
+    padding-bottom: 0;
+  }
+
+  /* ZZmain:not(.div__localisation-restaurants):not(.c_section-presentation) { */
+
+  /* Placer les <section> "fonctionnement" & "restaurants": 
+    - en ligne & aux extrémités
+    - avec 1 marge externe Gauche & droite de 20px 
+  */
+  .div-fonctionnement-et-restaurants {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-right: 20px;
+    /* color: red; */
+  }
+
+  /* <section> "Fonctionnement" ----------------------------------------------------------- */
+
+  /* Pour la section "fonctionnement": 
+  - tailler sa Largeur & sa Hauteur
+  - mettre le fond en Gris
+  - mettre 4 arrondis
+  */
+  .c_section-fonctionnement {
+    width: 38%;
+    height: 480px;
+    background-color: var(--couleur_2);
+    border-radius: 20px;
+  }
+
+  /* Pour la section "fonctionnement": centrer son Titre */
+  .c_section-fonctionnement h2 {
+    text-align: center;
+  }
+
+  /* - Placer ses enfants aux extrémités
+   - Tailler sa Hauteur
+   - poser 1 marge externe haute de 20px
+  */
+  .c_section-fonctionnement ol {
+    justify-content: space-around;
+    height: 80%;
+    margin-top: 20px;
+    /* background-color: green; */
+  }
+
+  /* Pour chaque <li> (i.e Picto & Libellé): 
+  - tailler sa Largeur 
+  - mettre le fond en Blanc
+  - Tailler la Font
+  */
+  .c_section-fonctionnement ol li {
+    width: 90%;
+    background-color: var(--couleur_0);
+    font-size: 20px;
+  }
+
+  /* <section> "Restaurants" ---------------------------------------------------------------- */
+  /* Pour la section "Restaurants":  
+    - tailler sa Largeur
+    - poser 1 marge externe Haute de 55px
+    - tailler sa Hauteur
+    - poser 4 arrondis
+    - mettre 1 marge interne Bas à 0
+    - placer ses enfants (i.e "c_section-restaurants__div-duo-haut" & "c_section-restaurants__div-duo-bas" ) en Ligne
+  */
+  .c_section-restaurants {
+    width: 60%;
+    margin-top: 55px;
+    height: 450px;
+    border-radius: 20px;
+    padding-bottom: 0;
+  }
+
+  /* - Placer ses enfants (i.e "c_section-restaurants__article") en Ligne
+     - tailler leur hauteur
+  */
+  .c_section-restaurants__div-duo-haut,
+  .c_section-restaurants__div-duo-bas {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 400px;
+  }
+
+  /* Centrer son Titre <h2> */
+  .c_section-restaurants h2 {
+    text-align: center;
+    margin-top: -10px;
+  }
+
+  /* Pour chaque Article: 
+  - tailler sa Largeur & sa Hauteur
+  - mettre le fond en blanc
+  */
+  .c_section-restaurants__article {
+    width: 100%;
+    height: 85%;
+    background-color: var(--couleur_0);
+  }
+
+  /* Pour chaque image: tailler la hauteur */
+  .c_section-restaurants__article img {
+    height: 100px;
+  }
+
+  /* <footer> --------------------------------------------------------------------------------- */
+  /* Concernant le <footer>: centrer son titre */
+  footer h2 {
+    display: block;
+    margin: auto;
+    width: 100px;
+    /* 125px - 25px */
+    margin-bottom: 40px;
+  }
+
+  /* Concernant le <footer>: 
+  - placer ses enfants en Ligne & aux extrémités 
+  - tailler leur font
+  */
+  footer ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 20px;
+  }
+
+}
+
+/* fin @media ORDINATEUR ----------------------------------------------------------------------------------------- */
