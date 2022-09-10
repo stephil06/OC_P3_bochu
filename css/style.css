@@ -29,6 +29,28 @@
   /* initialement gris foncé */
   --couleur_2-fonce: #d9d9d9;
 
+  /* MEN0909 debut */
+
+  /* Couleurs de FOND ----------------------- */
+  /* initialement blanc */
+  --couleur_fond_primaire: #FFFFFF;
+  /* initialement gris */
+  --couleur_fond_secondaire: #F2F2F2;
+   /* initialement noir */
+   --couleur_fond_tertiaire: #000000;
+
+  /* Couleurs de TEXTE ----------------------- */
+  /* initialement Noir */
+  --couleur_texte_primaire: #000000;
+  /* initialement Blanc */
+  --couleur_texte_secondaire: #FFFFFF;
+  /* initialement Gris sombre */
+  --couleur_texte_tertiaire: RGB(130, 130, 130);
+
+  /* MEN0909 fin */
+
+
+
   --section-restaurants_marge: 15px;
 }
 
@@ -80,7 +102,7 @@ header {
   - poser une marge externe Gauche de 25px
 */
 header a {
-  color: var(--couleur_1);
+  color: var(--couleur_texte_primaire);
   position: absolute;
   left: 0;
   bottom: 20px;
@@ -100,8 +122,8 @@ footer h2 {
 /*  - Placer ses enfants (i.e. picto "localisation" & <p> ) en Ligne 
     - les centrer
     - tailler sa hauteur sur 50px
-    - mettre le fond en gris
-    - placer 1 bordure top Gris foncé
+    - mettre le fond en gris foncé
+    - placer 1 bordure top Gris encore plus foncé
 */
 .div__localisation-restaurants {
   display: flex;
@@ -112,8 +134,8 @@ footer h2 {
   height: 50px;
   /* 110px - 60px */
 
-  border-top: 5px solid var(--couleur_2);
-  background-color: var(--couleur_2-fonce);
+  border-top: 4px solid RGB(222, 222, 222);
+  background-color: RGB(235,235,235);
   margin-top: 10px;
   margin-bottom: -10px;
   padding-bottom: 10px;
@@ -141,7 +163,7 @@ footer h2 {
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 50px;
-  background-color: var(--couleur_2);
+  background-color: var(--couleur_fond_secondaire);
   margin-top: 0;
 }
 
@@ -151,6 +173,12 @@ footer h2 {
   /* H G B D */
   /* H: 160px - 110px ; G: 65px  ; D (375px - 345px) */
 }
+
+/* Pour le <p> : mettre le texte en Gris sombre */
+.c_section-presentation p {
+  color: var(--couleur_texte_tertiaire);
+}
+
 
 /* <button> "Explorer" ou "Commander" ------------------------------------------------------------------------ */
 /* (index.html & les pages html des menus) Boutton "Explorer nos restaurants" ou "Commander" */
@@ -170,7 +198,7 @@ Pour le bouton "Explorer" ou "Commander":
    commençant en --couleur_primaire et finissant en --couleur_secondaire. */
   background: linear-gradient(to left top, var(--couleur_primaire), var(--couleur_secondaire));
 
-  color: var(--couleur_0);
+  color: var(--couleur_texte_secondaire);
 
   box-shadow: 10px 10px 20px var(--couleur_2-fonce);
   /* décalage x (de l'ombre); décalage y (de l'ombre); épaisseur de l'ombre */
@@ -237,9 +265,9 @@ Pour le bouton "Explorer" ou "Commander":
   justify-content: flex-start;
   align-items: center;
 
-  background: var(--couleur_2);
+  background: var(--couleur_fond_secondaire);
   border-radius: 20px;
-  box-shadow: 10px 10px 20px var(--couleur_2);
+  box-shadow: 10px 10px 20px var(--couleur_fond_secondaire);
   /* décalage x (de l'ombre); décalage y (de l'ombre); épaisseur de l'ombre */
 
   width: 90%;
@@ -256,13 +284,15 @@ Pour le bouton "Explorer" ou "Commander":
 }
 
 /* Pour chaque Picto:
-  - mettre 1 marge interne Gauche & Droite à resp. 15px & 10px 
+  - mettre 1 marge interne Gauche & Droite à resp. 15px & 10px
+  - mettre le texte en Gris
 */
 .c_section-fonctionnement ol li .fa-tablet-alt,
 .c_section-fonctionnement ol li .fa-list-ul,
 .c_section-fonctionnement ol li .fa-store {
   padding-left: 15px;
   padding-right: 10px;
+  color: var(--couleur_texte_tertiaire);
   /* background-color: red; */
 }
 
@@ -309,7 +339,7 @@ Pour le bouton "Explorer" ou "Commander":
   height: 20px;
 
   background-color: var(--couleur_primaire);
-  color: var(--couleur_0);
+  color: var(--couleur_texte_secondaire);
 
   margin-left: -10px;
 }
@@ -330,7 +360,7 @@ Pour le bouton "Explorer" ou "Commander":
   /* pour rendre elastic */
 
   text-decoration: none;
-  color: var(--couleur_1);
+  color: var(--couleur_texte_primaire);
   font-weight: bold;
 }
 
@@ -348,7 +378,7 @@ Pour le bouton "Explorer" ou "Commander":
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
-  background-color: var(--couleur_2);
+  background-color: var(--couleur_fond_secondaire);
   padding-top: 30px;
   padding-bottom: 40px;
 }
@@ -365,6 +395,8 @@ Pour le bouton "Explorer" ou "Commander":
   - poser une ombre noir
   - poser des marges externes à 15px
   - poser une position "relative" pour placer ses enfants "Nouveau" &  Picto évaluation ("coeur")
+  - mettre le fond en Blanc
+
 */
 .c_section-restaurants__article {
   display: flex;
@@ -372,11 +404,12 @@ Pour le bouton "Explorer" ou "Commander":
   height: 250px;
   /* 1195px - 945px */
   border-radius: 20px;
-  box-shadow: 2px 2px 12px -11px var(--couleur_1);
+  box-shadow: 2px 2px 12px -11px var(--couleur_fond_tertiaire);
   margin: 0 var(--section-restaurants_marge) var(--section-restaurants_marge) var(--section-restaurants_marge);
   /* haut droit bas gauche */
 
   position: relative;
+  background-color: var(--couleur_fond_primaire);
 }
 
 /* Pour chaque <a>: 
@@ -385,7 +418,7 @@ Pour le bouton "Explorer" ou "Commander":
 */
 .c_section-restaurants__article a {
   text-decoration: none;
-  color: var(--couleur_1);
+  color: var(--couleur_texte_primaire);
 }
 
 /* Pour l'élément "Nouveau": 
@@ -438,14 +471,6 @@ Pour le bouton "Explorer" ou "Commander":
   padding-left: 10px;
 }
 
-/* Pour la description (i.e <h3> & <p>) :
-  - remonter ses enfants
-  - poser un décalage gauche
-*/
-.c_section-restaurants__article__div-description {
-  line-height: 5px;
-  padding-left: 10px;
-}
 
 /* Pour le Picto évaluation ("coeur") 
     - tailler sa largeur & sa hauteur
@@ -478,19 +503,20 @@ Pour le bouton "Explorer" ou "Commander":
 /* <footer> ------------------------------------------------------------------------------------------------------- */
 
 /* Pour le <footer> :
-  - mettre le fond en noir
+  - mettre le fond en Gris anthracite
   - mettre les 2 pictos en blanc
 */
 footer {
-  background-color: var(--couleur_1);
-  color: var(--couleur_0);
+  background-color: #303030; /* RGB(48, 48, 48); */
+  color: var(--couleur_texte_secondaire);
   width: 100%;
   padding: 20px 0 20px 0;
   /* haut ; droit ; bas ; gauche */
 }
 
+/* mettre son Titre en Blanc */
 footer h2 {
-  color: var(--couleur_0);
+  color: var(--couleur_texte_secondaire);
   font-style: italic;
   margin-left: 30px;
   margin-top: 10px;
@@ -574,7 +600,7 @@ footer address {
     - poser 1 marge interne Bas (de 155px)
 */
 .c_section-menu {
-  background-color: var(--couleur_2);
+  background-color: var(--couleur_fond_secondaire);
   width: 100%;
   border-radius: 40px 40px 0px 0px;
   margin-top: 220px;
@@ -624,7 +650,7 @@ footer address {
 .c_section-entrees__article,
 .c_section-plats__article,
 .c_section-desserts__article {
-  background-color: var(--couleur_0);
+  background-color: var(--couleur_fond_primaire);
   height: 75px;
   /* 495px - 420px */
   border-radius: 20px;
@@ -686,7 +712,7 @@ footer address {
 
 /* Mettre le cercle en Blanc & tailler sa Font */
 .fa-check-circle {
-  color: var(--couleur_0);
+  color: var(--couleur_texte_secondaire);
   font-size: 20px;
 }
 
@@ -859,7 +885,7 @@ cf. https://www.alsacreations.com/article/lire/539-Centrer-les-elements-ou-un-si
   */
   .c_section-fonctionnement ol li {
     width: 90%;
-    background-color: var(--couleur_0);
+    background-color: var(--couleur_fond_primaire);
     font-size: 20px;
   }
 
@@ -904,7 +930,7 @@ cf. https://www.alsacreations.com/article/lire/539-Centrer-les-elements-ou-un-si
   .c_section-restaurants__article {
     width: 100%;
     height: 85%;
-    background-color: var(--couleur_0);
+    background-color: var(--couleur_fond_primaire);
   }
 
   /* Pour chaque image: tailler la hauteur */
