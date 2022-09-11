@@ -36,8 +36,8 @@
   --couleur_fond_primaire: #FFFFFF;
   /* initialement gris */
   --couleur_fond_secondaire: #F2F2F2;
-   /* initialement noir */
-   --couleur_fond_tertiaire: #000000;
+  /* initialement noir */
+  --couleur_fond_tertiaire: #000000;
 
   /* Couleurs de TEXTE ----------------------- */
   /* initialement Noir */
@@ -135,7 +135,7 @@ footer h2 {
   /* 110px - 60px */
 
   border-top: 4px solid RGB(222, 222, 222);
-  background-color: RGB(235,235,235);
+  background-color: RGB(235, 235, 235);
   margin-top: 10px;
   margin-bottom: -10px;
   padding-bottom: 10px;
@@ -472,6 +472,10 @@ Pour le bouton "Explorer" ou "Commander":
 }
 
 
+.c_section-restaurants__article__div-description p {
+  color: #303030;
+}
+
 /* Pour le Picto évaluation ("coeur") 
     - tailler sa largeur & sa hauteur
     - mettre le curseur en forme de "main"
@@ -507,7 +511,8 @@ Pour le bouton "Explorer" ou "Commander":
   - mettre les 2 pictos en blanc
 */
 footer {
-  background-color: #303030; /* RGB(48, 48, 48); */
+  background-color: #303030;
+  /* RGB(48, 48, 48); */
   color: var(--couleur_texte_secondaire);
   width: 100%;
   padding: 20px 0 20px 0;
@@ -630,6 +635,7 @@ footer address {
   - poser 1 marge externe Gauche de 20px
   - retirer le Gras
   - mettre une bordure verte de largeur 45px, & au-dessous de 10px
+  - mettre la couleur en GRIS sombre
 */
 .c_section-entrees h3,
 .c_section-plats h3,
@@ -639,6 +645,7 @@ footer address {
   border-bottom: solid 3px var(--couleur_tertiaire);
   width: 45px;
   padding-bottom: 10px;
+  color: RGB(94, 94, 94);
 }
 
 /* Concernant les sections "ENTREES", "PLATS", "DESSERTS", pour chaque <article>: 
@@ -684,6 +691,14 @@ footer address {
   margin: -30px 20px 0 15px;
   /* haut | droit | bas | gauche */
 }
+
+/* pour chaque <p>: mettre la couleur en GRIS sombre */
+.c_section-entrees__article__div-description p,
+.c_section-plats__article__div-description p,
+.c_section-desserts__article__div-description p {
+  color: RGB(94, 94, 94);
+}
+
 
 /* Pour le bouton "choisir": 
   - mettre le fond en Vert
