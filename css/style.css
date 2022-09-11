@@ -102,15 +102,20 @@ header {
 }
 
 /* Pour le <a> (du <header>) (représenté par le Picto "flèche gauche"):
+  - tailler le Picto
   - le mettre en Noir
   - le décaler à gauche (soit 0px de la marge gauche) & le décaler en bas de 20px, par rapport à son Père (i.e le <header>)
   - poser une marge externe Gauche de 25px
 */
 header a {
+  font-size: 26px;
+  /* MEN0909 */
   color: var(--couleur_texte_primaire);
   position: absolute;
   left: 0;
-  bottom: 20px;
+  bottom: 15px;
+  /* 20px; */
+  /* MEN0909 */
   margin-left: 25px;
 }
 
@@ -482,7 +487,8 @@ Pour le bouton "Explorer" ou "Commander":
   height: 30px;
   /* 985px - 955px */
   background-color: var(--couleur_tertiaire);
-  color: #00805f; /* RGB(58, 133, 75); */
+  color: #00805f;
+  /* RGB(58, 133, 75); */
   /* #006400; */
   font-weight: bold;
 
