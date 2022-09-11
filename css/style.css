@@ -564,7 +564,10 @@ Pour le bouton "Explorer" ou "Commander":
   - mettre les 2 pictos en blanc
 */
 footer {
+  /* MEN0909_debut: mettre le fond en gris anthracite */
   background-color: #303030;
+  /* MEN0909_fin */
+
   /* RGB(48, 48, 48); */
   color: var(--couleur_texte_secondaire);
   width: 100%;
