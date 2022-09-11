@@ -83,16 +83,21 @@ body {
 /* Concernant le <header> :
  - mettre son enfant (i.e le <h1> Logo) en Ligne & le centrer
  - tailler sa largeur & sa hauteur
- - poser une marge externe haute de 25px
+ - poser une marge interne Haute & Bas de 10px
 */
 header {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 45px;
+  height: 40px;
 
-  margin-top: 25px;
+  /* MEN0909 */
+  /* margin-top: 20px; */
+  /* 25px; */
+  padding-top: 10px;
+  padding-bottom: 10px;
+  /* MEN0909 fin */
   position: relative;
 }
 
@@ -136,7 +141,7 @@ footer h2 {
 
   border-top: 4px solid RGB(222, 222, 222);
   background-color: RGB(235, 235, 235);
-  margin-top: 10px;
+  margin-top: 0px;
   margin-bottom: -10px;
   padding-bottom: 10px;
 }
@@ -162,7 +167,11 @@ footer h2 {
   /* 400px - 110px */
   padding-left: 20px;
   padding-right: 20px;
-  padding-bottom: 50px;
+  /* MEN0909_debut */
+  /* padding-bottom: 50px; */
+  padding-bottom: 10px;
+  /* MEN0909_fin */
+
   background-color: var(--couleur_fond_secondaire);
   margin-top: 0;
 }
@@ -203,7 +212,11 @@ Pour le bouton "Explorer" ou "Commander":
   box-shadow: 10px 10px 20px var(--couleur_2-fonce);
   /* décalage x (de l'ombre); décalage y (de l'ombre); épaisseur de l'ombre */
 
-  padding: 20px 50px;
+  /* MEN0909_debut */
+  /* padding: 20px 50px; */ 
+  padding: 20px 20px; /* vertical | horizontal */
+  /* MEN0909_fin */
+
   /* vertical (1357px - 1337px) ; horizontal (280px - 230px) */
   border-radius: 80px;
   border: none;
@@ -243,12 +256,16 @@ Pour le bouton "Explorer" ou "Commander":
 */
 .c_section-fonctionnement ol {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
+  flex-direction: column; align-items: center;
+  /* justify-content: space-between; */ justify-content: space-around; /* background : green; */
+  
   /* 600px - 580px */
   padding-left: 0;
+
+  height: 290px;
+  padding-left: 0px;
+  list-style: none;
+
 }
 
 /* Pour chaque <li> :
@@ -262,19 +279,23 @@ Pour le bouton "Explorer" ou "Commander":
 .c_section-fonctionnement ol li {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  /* justify-content: flex-start; */ justify-content: left;  /* gap: 10px; */
   align-items: center;
 
-  background: var(--couleur_fond_secondaire);
+  background: var(--couleur_fond_secondaire);   
   border-radius: 20px;
-  box-shadow: 10px 10px 20px var(--couleur_fond_secondaire);
-  /* décalage x (de l'ombre); décalage y (de l'ombre); épaisseur de l'ombre */
 
-  width: 90%;
-  /* 90%; */
-  height: 70px;
+  /* MEN0909_debut : la capsule a une ombre */
+  box-shadow: 5px 5px 10px RGB(222, 222, 222); 
+   /* décalage x (de l'ombre); décalage y (de l'ombre); épaisseur de l'ombre */
+  /* MEN0909_fin */
+
+  width: 91%; 
+  height: 80px; /* 70px; */
   /* 770px - 700px */
   counter-increment: li;
+
+  margin-left:0px;
 }
 
 /* Sur chaque <li>, au survol de la souris: mettre le fond violet clair
@@ -286,29 +307,38 @@ Pour le bouton "Explorer" ou "Commander":
 /* Pour chaque Picto:
   - mettre 1 marge interne Gauche & Droite à resp. 15px & 10px
   - mettre le texte en Gris
+  - tailler le Picto
 */
 .c_section-fonctionnement ol li .fa-tablet-alt,
 .c_section-fonctionnement ol li .fa-list-ul,
 .c_section-fonctionnement ol li .fa-store {
   padding-left: 15px;
-  padding-right: 10px;
-  color: var(--couleur_texte_tertiaire);
-  /* background-color: red; */
-}
-
-.c_section-fonctionnement ol li .fa-tablet-alt {
-  padding-left: 15px;
   padding-right: 11px;
+  /* MEN0909_debut : L'icône doit être grise et avoir la bonne taille */
+  color: var(--couleur_texte_tertiaire);
+  font-size: 19px; /* width: 5px; */
+  /* MEN0909_fin */
   /* background-color: red; */
 }
 
-.c_section-fonctionnement ol li .fa-list-ul {
+.ZZc_section-fonctionnement ol li .fa-tablet-alt {
+  padding-left: 15px;
+  margin-right: 10px;
+  background-color: red;
+}
+
+.ZZc_section-fonctionnement__span-choisissez {
+  background-color: green;
+}
+
+.ZZc_section-fonctionnement ol li .fa-list-ul {
   padding-left: 10px;
 }
 
-.c_section-fonctionnement__span-composez {
-  margin-left: -12px;
-  /* background-color: white; */
+.ZZc_section-fonctionnement__span-composez {
+  margin-left: -12px; display: flex; justify-content: right;
+  /* margin-left: 30px; margin-rigth:30px; */ width: 200px; margin: auto;
+   background-color: pink; 
 }
 
 /* Sur chaque <li>, au survol de la souris: mettre son Picto en violet */
@@ -335,8 +365,12 @@ Pour le bouton "Explorer" ou "Commander":
   border-radius: 50%;
   /* cercle */
   /* diametre du cercle (40px - 20px) */
-  width: 20px;
-  height: 20px;
+  
+  /* MEN0909_debut : la pastille violet est plus grande et le chiffre légèrement plus petit */
+  width: 27px;
+  height: 27px;
+  font-size: 14px;
+  /* MEN0909_fin */
 
   background-color: var(--couleur_primaire);
   color: var(--couleur_texte_secondaire);
@@ -584,7 +618,7 @@ footer address {
 /* Concernant la photo du restaurant: 
   - tailler sa largeur
   - tailler sa hauteur
-  - la décaler vers le haut (de 200px) par rapport à son Père (i.e "c_section-menu")
+  - la décaler vers le haut (de 220px) par rapport à son Père (i.e "c_section-menu")
 */
 .c_img-menu {
   width: 100%;
@@ -592,7 +626,7 @@ footer address {
   /* 310px - 60px */
 
   position: absolute;
-  margin-top: -200px;
+  margin-top: -220px;
 }
 
 /* <section> "menu" ---------------------------------------------------------------------------------------------- */
@@ -736,10 +770,12 @@ footer address {
   display: block;
 }
 
-/* Centrer le bouton "Commander"
+/* Centrer le bouton "Commander" & Retailler sa Largeur
 cf. https://www.alsacreations.com/article/lire/539-Centrer-les-elements-ou-un-site-web-en-CSS.html
 */
 .c_button-explorer-ou-commander--placer {
+  padding: 20px 50px; /* Vertical Horizontal */
+  
   position: absolute;
   /* postulat de départ */
   top: 92%;
