@@ -20,22 +20,15 @@
 
   /* couleurs (implicites de la charte) : Blanc, Noir, Gris */
 
-  /* initialement blanc */
-  --couleur_0: #FFFFFF;
-  /* initialement noir */
-  --couleur_1: #000000;
-  /* initialement gris */
-  --couleur_2: #F2F2F2;
-  /* initialement gris foncé */
-  --couleur_2-fonce: #d9d9d9;
-
   /* MEN0909 debut */
-
+  /* Les valeurs de couleurs sont obtenues via le logiciel "Inkscape" Fonction "Capturer des couleurs depuis l'image" 
+  NB: Les valeurs sont: # suivi de 6 caractères Hexadécimaux ; pas usage de fonction eg. RGB() pour éviter le coût d'un appel de fonction)
+  */
   /* Couleurs de FOND ----------------------- */
   /* initialement blanc */
   --couleur_fond_primaire: #FFFFFF;
   /* initialement gris */
-  --couleur_fond_secondaire: #F2F2F2;
+  --couleur_fond_secondaire: #F6F6F6;
   /* initialement noir */
   --couleur_fond_tertiaire: #000000;
 
@@ -45,11 +38,9 @@
   /* initialement Blanc */
   --couleur_texte_secondaire: #FFFFFF;
   /* initialement Gris sombre */
-  --couleur_texte_tertiaire: RGB(130, 130, 130);
+  --couleur_texte_tertiaire: #A6A6A6;
 
   /* MEN0909 fin */
-
-
 
   --section-restaurants_marge: 15px;
 }
@@ -144,8 +135,8 @@ footer h2 {
   height: 50px;
   /* 110px - 60px */
 
-  border-top: 4px solid RGB(222, 222, 222);
-  background-color: RGB(235, 235, 235);
+  border-top: 4px solid #d8d8d8;
+  background-color: #eaeaea;
   margin-top: 0px;
   margin-bottom: -10px;
   padding-bottom: 10px;
@@ -214,7 +205,7 @@ Pour le bouton "Explorer" ou "Commander":
 
   color: var(--couleur_texte_secondaire);
 
-  box-shadow: 10px 10px 20px var(--couleur_2-fonce);
+  box-shadow: 10px 10px 20px #C7C7C7;
   /* décalage x (de l'ombre); décalage y (de l'ombre); épaisseur de l'ombre */
 
   /* MEN0909_debut */
@@ -297,7 +288,7 @@ Pour le bouton "Explorer" ou "Commander":
   border-radius: 20px;
 
   /* MEN0909_debut : la capsule a une ombre */
-  box-shadow: 5px 5px 10px RGB(222, 222, 222);
+  box-shadow: 5px 5px 10px #E8E8E8;
   /* décalage x (de l'ombre); décalage y (de l'ombre); épaisseur de l'ombre */
   /* MEN0909_fin */
 
@@ -480,16 +471,13 @@ Pour le bouton "Explorer" ou "Commander":
   - centrer son texte
   - le placer par rapport à son Père (i.e Article) à 15px à droite & à 15px en haut 
 */
-/* .c_section-restaurants__article__div-nouveau { */
 .c_section-restaurants__article__span-nouveau {
   width: 80px;
   /* 345px - 265px */
   height: 30px;
   /* 985px - 955px */
   background-color: var(--couleur_tertiaire);
-  color: #00805f;
-  /* RGB(58, 133, 75); */
-  /* #006400; */
+  color: #259D80;
   font-weight: bold;
 
   /* MEN0909_debut : l'étiquette nouveau a trop de marge -> bottom */
@@ -571,10 +559,8 @@ Pour le bouton "Explorer" ou "Commander":
 */
 footer {
   /* MEN0909_debut: mettre le fond en gris anthracite */
-  background-color: #303030;
+  background-color: #353535;
   /* MEN0909_fin */
-
-  /* RGB(48, 48, 48); */
   color: var(--couleur_texte_secondaire);
   width: 100%;
   padding: 20px 0 20px 0;
@@ -615,7 +601,7 @@ footer ul li {
 */
 footer ul a {
   text-decoration: none;
-  color: var(--couleur-blanc);
+  color: var(--couleur_texte_secondaire);
 }
 
 /* .c_footer__a-restaurant { */
@@ -665,6 +651,7 @@ footer address {
   font-family: "Shrikhand", sans-serif;
   font-size: 36px;
 }
+
 /* MEN0909_fin */
 
 /* Pour la <section> "menu": 
@@ -715,7 +702,7 @@ footer address {
   border-bottom: solid 3px var(--couleur_tertiaire);
   width: 45px;
   padding-bottom: 10px;
-  color: RGB(94, 94, 94);
+  color: #8F8F8F;
 }
 
 /* Concernant les sections "ENTREES", "PLATS", "DESSERTS", pour chaque <article>: 
@@ -766,8 +753,16 @@ footer address {
 .c_section-entrees__article__div-description p,
 .c_section-plats__article__div-description p,
 .c_section-desserts__article__div-description p {
-  color: RGB(94, 94, 94);
+  color: #8F8F8F;
 }
+
+/* pour chaque <strong>: mettre la couleur en NOIR */
+.c_section-entrees__article__div-description strong,
+.c_section-plats__article__div-description strong,
+.c_section-desserts__article__div-description strong {
+  color: var(--couleur_texte_primaire);
+}
+
 
 
 /* Pour le bouton "choisir": 
@@ -946,7 +941,7 @@ cf. https://www.alsacreations.com/article/lire/539-Centrer-les-elements-ou-un-si
   .c_section-fonctionnement {
     width: 38%;
     height: 480px;
-    background-color: var(--couleur_2);
+    background-color: var(--couleur_fond_primaire);
     border-radius: 20px;
   }
 
