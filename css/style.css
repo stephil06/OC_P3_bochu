@@ -729,15 +729,23 @@ footer address {
 
 /* Concernant les Articles des sections "ENTREES", "PLATS", "DESSERTS", pour chaque titre <h4>:
     - tailler la police
+    - poser 1 marge interne Haut de 10px (pour faire "descendre" <h4>)
     - poser 1 marge externe Gauche de 15px
-    - poser une marge externe Bas de -5px
+    - poser une marge externe Bas de 20px (pour faire "monter" les éléments du dessous i.e <p> & le prix) 
 */
 .c_section-entrees__article h4,
 .c_section-plats__article h4,
 .c_section-desserts__article h4 {
-  font-size: 16px;
+
+  /* MEN0909_debut:  Retailler la 1ère phrase */
+  font-size: 22px; /* 16px; */
+  /* MEN0909_fin */
+
+  /* MEN0909_debut: Réduire l'espace entre les deux lignes */
+  padding-top: 10px;
   margin-left: 15px;
-  line-height: 1.8;
+  margin-bottom: 20px;
+  /* MEN0909_fin */
 }
 
 /*  Concernant les Articles des sections "ENTREES", "PLATS", "DESSERTS", pour chaque Description (i.e <p> & button): 
