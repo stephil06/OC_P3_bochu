@@ -753,7 +753,7 @@ footer address {
 }
 
 /* pour chaque 1er <p>: mettre la couleur en GRIS sombre */
-/* MEN0909_debut la 2ème phrase a une couleur grise et pas noir */
+/* MEN0909_debut la 2eme phrase a une couleur grise et pas noir */
 .c_section-entrees__article__div-description p:nth-child(1),
 .c_section-plats__article__div-description p:nth-child(1),
 .c_section-desserts__article__div-description p:nth-child(1) {
