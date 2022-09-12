@@ -691,7 +691,7 @@ footer address {
 /* Concernant les sections "ENTREES", "PLATS", "DESSERTS", pour chaque titre <h3>:
   - poser 1 marge externe Gauche de 20px
   - retirer le Gras
-  - mettre une bordure verte de largeur 45px, & au-dessous de 10px
+  - mettre une bordure verte de largeur 45px, & au-dessous de 3px
   - mettre la couleur en GRIS sombre
 */
 .c_section-entrees h3,
@@ -701,7 +701,10 @@ footer address {
   font-weight: normal;
   border-bottom: solid 3px var(--couleur_tertiaire);
   width: 45px;
-  padding-bottom: 10px;
+  /* MEN0909_debut : réduire l'espace entre ENTRÉES et le souligné vert */
+  padding-bottom: 3px;
+  /* 10px; */
+  /* MEN0909_fin */
   color: #8F8F8F;
 }
 
@@ -749,21 +752,14 @@ footer address {
   /* haut | droit | bas | gauche */
 }
 
-/* pour chaque <p>: mettre la couleur en GRIS sombre */
-.c_section-entrees__article__div-description p,
-.c_section-plats__article__div-description p,
-.c_section-desserts__article__div-description p {
+/* pour chaque 1er <p>: mettre la couleur en GRIS sombre */
+/* MEN0909_debut la 2ème phrase a une couleur grise et pas noir */
+.c_section-entrees__article__div-description p:nth-child(1),
+.c_section-plats__article__div-description p:nth-child(1),
+.c_section-desserts__article__div-description p:nth-child(1) {
   color: #8F8F8F;
 }
-
-/* pour chaque <strong>: mettre la couleur en NOIR */
-.c_section-entrees__article__div-description strong,
-.c_section-plats__article__div-description strong,
-.c_section-desserts__article__div-description strong {
-  color: var(--couleur_texte_primaire);
-}
-
-
+/* MEN0909_fin */
 
 /* Pour le bouton "choisir": 
   - mettre le fond en Vert
