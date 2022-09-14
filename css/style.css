@@ -222,9 +222,15 @@ Pour le bouton "Explorer" ou "Commander":
   cursor: pointer;
 }
 
-/* Au survol de la souris: mettre le fond Violet */
+/*
+Au survol du bouton "Explorer ou Commander" :
+  - la couleur de fond doit légèrement s’éclaircir (<=> choisir 1 teinte + claire pour le Violet & le Rose du "linear-gradient")
+  - l’ombre portée doit être plus visible (<=> choisir 1 teinte + foncée pour le "box-shadow")
+NB: Le choix de la teinte + claire ou + foncée a été effectué via https://www.colorhexa.com/
+*/
 .c_button-explorer-ou-commander:hover {
-  background: var(--couleur_primaire);
+  background: linear-gradient(to left top, #AE80E5, #FF76EF);
+  box-shadow: 10px 10px 20px #A1A1A1;
 }
 
 /* Fin <button> "Explorer" ou "Commander" ------------------------------------------------------------------------------ */
