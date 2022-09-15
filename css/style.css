@@ -532,23 +532,28 @@ NB: Le choix de la teinte + claire ou + foncée a été effectué via https://ww
 /* Pour le Picto évaluation ("coeur") 
     - tailler sa largeur & sa hauteur
     - mettre le curseur en forme de "main"
-    - le placer par rapport à son Père (i.e Article) à 10px à droite & 15px en bas
+    - le placer par rapport à son Père (i.e Article) à 15px à droite & 25px en bas
 */
-.c_section-restaurants__article__div-description .fa-heart {
-  width: 45px;
-  height: 45px;
+.c_section-restaurants__article__div-description .c_button-coeur
+
+/* .fa-heart */
+  {
+  width: 35px;
+  /* 45px; */
+  height: 35px;
+  /* 45px; */
   cursor: pointer;
 
   position: absolute;
   /* son Père : Article */
-  right: 10px;
-  /* 10px à droite par rapport à son Père (i.e Article) */
-  bottom: 15px;
-  /* 5px en Bas par rapport à son Père (i.e Article) */
+  right: 15px;
+  /* 15px à droite par rapport à son Père (i.e Article) */
+  bottom: 25px;
+  /* 25px en Bas par rapport à son Père (i.e Article) */
 }
 
 /* Au survol de la souris sur le Picto coeur : mettre le fond en Dégradé Violet Rose  */
-.c_section-restaurants__article__div-description .fa-heart:hover {
+.ZZc_section-restaurants__article__div-description .fa-heart:hover {
   /* Un dégradé (commençant en bas à droite et) allant jusqu'au coin gauche supérieur,
    commençant en --couleur_primaire et finissant en --couleur_secondaire. */
   background: linear-gradient(to left top, var(--couleur_primaire), var(--couleur_secondaire));
@@ -744,7 +749,8 @@ footer address {
 .c_section-desserts__article h4 {
 
   /* MEN0909_debut:  Retailler la 1ère phrase */
-  font-size: 22px; /* 16px; */
+  font-size: 22px;
+  /* 16px; */
   /* MEN0909_fin */
 
   /* MEN0909_debut: Réduire l'espace entre les deux lignes */
@@ -773,6 +779,7 @@ footer address {
 .c_section-desserts__article__div-description p:nth-child(1) {
   color: #8F8F8F;
 }
+
 /* MEN0909_fin */
 
 /* Pour le bouton "choisir": 
@@ -826,6 +833,78 @@ cf. https://www.alsacreations.com/article/lire/539-Centrer-les-elements-ou-un-si
   transform: translate(-50%, -50%);
   /* décalage de 50% de sa propre taille */
 }
+
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------- */
+/* ------------------------------------------------------- (ANIMATIONS) ---------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* on style le bouton "coeur":
+  - on met position: "relative" pour le placement de ses enfants (i.e "c_coeur-vide" & "c_coeur-plein")
+  - on met le Fond "transparent"
+  - on taille sa Largeur & sa Hauteur (pour délimiter la zone cliquable)
+  - on met le curseur en forme de "main"
+  - on ote la bordure
+*/
+.c_button-coeur {
+  position: relative;
+  background-color: transparent;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  /* border: none; */
+}
+
+/* Pour le coeur-vide: 
+  - on met position: "absolute" pour le placer par rapport à son Père (i.e "c_button-coeur")
+  - on le place à 0px Bas & 0px Gauche
+*/
+.c_coeur-vide {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+/* Pour le coeur-plein : 
+  - on met position: "absolute" pour le placer par rapport à son Père (i.e c_button-coeur)
+  - on le place à la pointe basse du coeur
+  - on met son Fond en dégradé : --couleur_secondaire (i.e Rose) puis --couleur_primaire (i.e Violet) en Haut
+  - on met sa taille à la moitié du coeur vide (i.e 16px)
+  - on ote le contour externe cf. https://openclassrooms.com/forum/sujet/linear-gradient-sur-icone-font-awesome
+  - on le rend invisible (via opacity: 0)
+*/
+.c_coeur-plein {
+  position: absolute;
+  bottom: 0;
+  left: 5px;
+
+  background: linear-gradient(to top, var(--couleur_secondaire), var(--couleur_primaire));
+  font-size: 16px;
+
+  /* on ote le contour externe */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+
+  opacity: 1;
+}
+
+/* Au clic sur le bouton "coeur": on style le coeur plein, i.e :
+  - on le rend visible (via opacity: 1)
+  - on double sa taille (via font-size: 2em)
+  - on le place aux coordonnées du coeur vide i.e. bottom:0;  left: 0;
+  - durée de l'animation: 3s
+*/
+.c_button-coeur:focus .c_coeur-plein {
+  opacity: 1;
+  font-size: 2em;
+  bottom: 0;
+  left: 0;
+  transition-duration: 3s;
+}
+
 
 /* ------------------------------------------------------------------------------------------------------------------------------------------- */
 /* ------------------------------------------------------- (MEDIAQUERIES) -------------------------------------------------------------------- */
