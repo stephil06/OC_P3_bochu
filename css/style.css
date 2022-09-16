@@ -670,10 +670,15 @@ footer address {
 /* <section> "menu" ---------------------------------------------------------------------------------------------- */
 
 /* MEN0909_debut */
-/* Pour la <section> "menu": mettre le <h2> avec la font Shrikhand */
+/* Pour la <section> "menu": 
+  - mettre le <h2> avec la font Shrikhand 
+  - oter l'Italique
+  - tailler la Font  
+*/
 .c_section-menu h2 {
   font-family: "Shrikhand", sans-serif;
-  font-size: 36px;
+  font-size: 28px; /* 36px; */
+  font-style: normal;
 }
 
 /* MEN0909_fin */
