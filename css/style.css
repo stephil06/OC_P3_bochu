@@ -307,6 +307,22 @@ NB: Le choix de la teinte + claire ou + foncée a été effectué via https://ww
   margin-left: 0px;
 }
 
+.c_section-fonctionnement__span-choisissez {
+  /* color: red; background-color: pink; */
+  margin-right: -100px;
+  margin-left: 0;
+}
+
+.c_section-fonctionnement__span-composez {
+  margin-right: -85px;
+  margin-left: 0;
+}
+
+.c_section-fonctionnement__span-degustez {
+  margin-right: -88px;
+  margin-left: 0;
+}
+
 /* Sur chaque <li>, au survol de la souris: mettre le fond violet clair
 */
 .c_section-fonctionnement ol li:hover {
@@ -534,10 +550,7 @@ NB: Le choix de la teinte + claire ou + foncée a été effectué via https://ww
     - mettre le curseur en forme de "main"
     - le placer par rapport à son Père (i.e Article) à 15px à droite & 25px en bas
 */
-.c_section-restaurants__article__div-description .c_button-coeur
-
-/* .fa-heart */
-  {
+.c_section-restaurants__article__div-description .c_button-coeur {
   width: 35px;
   /* 45px; */
   height: 35px;
@@ -852,7 +865,7 @@ cf. https://www.alsacreations.com/article/lire/539-Centrer-les-elements-ou-un-si
   width: 30px;
   height: 30px;
   cursor: pointer;
-  /* border: none; */
+  border: none;
 }
 
 /* Pour le coeur-vide: 
@@ -888,7 +901,7 @@ cf. https://www.alsacreations.com/article/lire/539-Centrer-les-elements-ou-un-si
   -moz-background-clip: text;
   -moz-text-fill-color: transparent;
 
-  opacity: 1;
+  opacity: 0;
 }
 
 /* Au clic sur le bouton "coeur": on style le coeur plein, i.e :
@@ -897,7 +910,7 @@ cf. https://www.alsacreations.com/article/lire/539-Centrer-les-elements-ou-un-si
   - on le place aux coordonnées du coeur vide i.e. bottom:0;  left: 0;
   - durée de l'animation: 3s
 */
-.c_button-coeur:focus .c_coeur-plein {
+.c_button-coeur:hover .c_coeur-plein {
   opacity: 1;
   font-size: 2em;
   bottom: 0;
