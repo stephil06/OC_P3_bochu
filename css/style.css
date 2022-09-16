@@ -677,7 +677,8 @@ footer address {
 */
 .c_section-menu h2 {
   font-family: "Shrikhand", sans-serif;
-  font-size: 28px; /* 36px; */
+  font-size: 28px;
+  /* 36px; */
   font-style: normal;
 }
 
@@ -767,7 +768,8 @@ footer address {
 .c_section-desserts__article h4 {
 
   /* MEN0909_debut:  Retailler la 1ère phrase */
-  font-size: 22px;
+  font-size: 18px;
+  /* 22px; */
   /* 16px; */
   /* MEN0909_fin */
 
@@ -790,12 +792,16 @@ footer address {
   /* haut | droit | bas | gauche */
 }
 
-/* pour chaque 1er <p>: mettre la couleur en GRIS sombre */
+/* pour chaque 1er <p>: 
+  - mettre la couleur en GRIS sombre 
+  - retailler la police
+*/
 /* MEN0909_debut la 2eme phrase a une couleur grise et pas noir */
 .c_section-entrees__article__div-description p:nth-child(1),
 .c_section-plats__article__div-description p:nth-child(1),
 .c_section-desserts__article__div-description p:nth-child(1) {
   color: #8F8F8F;
+  font-size: 15px;
 }
 
 /* MEN0909_fin */
