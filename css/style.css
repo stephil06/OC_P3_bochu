@@ -863,6 +863,108 @@ cf. https://www.alsacreations.com/article/lire/539-Centrer-les-elements-ou-un-si
 /* ------------------------------------------------------- (ANIMATIONS) ---------------------------------------------------------------------- */
 /* ------------------------------------------------------------------------------------------------------------------------------------------- */
 
+/* "Loading spinner" ----------------------------------------------------------------------------------- */
+
+/* "c_page--colorer-fond c_page--animation-fond-opaque-a-transparent" ---------- */
+
+/* On crée 1 page Blanche: 
+  - on met la position à fixed : l'élément à "fixed", reste fixe i.e ne bouge pas quand défile l'écran,
+      (le point d'origine est coin haut gauche de la zone de contenu de la fenêtre)
+  - on met le top & left à 0
+  - on taille la Largeur & la Hauteur à 100% (pour couvrir toute la page html)
+  - on met le Fond en Blanc
+  - on met le z-index à 100, de sorte à mettre le Fond Blanc en 1ère position du calque
+ */
+.c_page--colorer-fond {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background-color: var(--couleur_fond_primaire);
+  /* Blanc */
+  z-index: 100;
+  /* L'élément ayant la plus grande valeur de z-index est au-dessus */
+}
+
+/* on applique une animation "kf_fond-opaque-a-transparent", consistant à mettre le Fond Transparent (à l'étape finale)
+ */
+.c_page--animation-fond-opaque-a-transparent {
+  animation: kf_fond-opaque-a-transparent 4s;
+  animation-fill-mode: forwards;
+  /* on garde les valeurs calculées lors de la dernière étape de l'animation, i.e opacity: 0 */
+  animation-delay: 2s;
+  /* différer le départ de la durée voulue */
+}
+
+/* A la fin de "c_loading-spinner--animation": 
+    - à l'étape finale: mettre le Fond Transparent
+*/
+@keyframes kf_fond-opaque-a-transparent {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+/* "c_loading-spinner--cercle c_loading-spinner--placer-milieu c_loading-spinner--animation" ------- */
+
+/* on style le "loading spinner":
+  - on crée 1 Cercle de diamètre 50px
+  - sur le cercle, on crée 4 bordures (avec pour chaque Bordure une couleur de la charte graphique) 
+*/
+.c_loading-spinner--cercle {
+  /* .loader-spinner-logo { */
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+
+  border-top: 10px solid var(--couleur_primaire);
+  border-right: 10px solid var(--couleur_secondaire);
+  border-bottom: 10px solid var(--couleur_tertiaire);
+  border-left: 10px solid var(--couleur_fond_secondaire);
+}
+
+/* on place le "loading spinner" au milieu de la page:
+  - on met position: "absolute" : i.e. sa position est définie par rapport au coin supérieur gauche de la page
+  - (avec top right bottom left à 0), on le place dans le coin supérieur gauche de la page
+  - (avec margin: auto), on le place au centre de la page (=> même si on scroll la barre verticale, sa position au centre de la page est maintenue)
+  */
+.c_loading-spinner--placer-milieu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+/* on applique 1 animation "kf_rotate": 
+    - on fait tourner le cercle (dans le sens des aiguilles d'une montre
+    - pendant 1 seconde à vitesse constante
+*/
+.c_loading-spinner--animation {
+  animation: kf_rotate 1s linear;
+  /* linear : entre 2 valeurs de keyframes, l’animation aura une vitesse constante du début à la fin */
+  animation-iteration-count: 3;
+}
+
+/* on applique 1 Rotation de + 360° (+: sens des aiguilles d'une montre) */
+@keyframes kf_rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(+360deg);
+  }
+}
+
+/* Bouton "coeur" -------------------------------------------------------------------------------------- */
 /* on style le bouton "coeur":
   - on met position: "relative" pour le placement de ses enfants (i.e "c_coeur-vide" & "c_coeur-plein")
   - on met le Fond "transparent"
