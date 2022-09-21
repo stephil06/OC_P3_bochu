@@ -804,7 +804,7 @@ footer address {
   - poser 2 arrondis à droite (Haut & Bas)
   - oter la bordure
   - poser un "position: absolute" en rapport à son Père (i.e "c_section-...__article")
-  - par rapport à son Père (i.e "c_section-...__article"): poser un top & right à 0
+  - par rapport à son Père (i.e "c_section-...__article"): poser un top à 0 & un right à -1000px pour le faire disparaître
   - mettre le curseur en forme de "main"
 */
 .c_button-choisir {
@@ -902,6 +902,7 @@ cf. https://www.alsacreations.com/article/lire/539-Centrer-les-elements-ou-un-si
 
   100% {
     opacity: 0;
+    z-index: -1;
   }
 }
 
@@ -1022,6 +1023,39 @@ cf. https://www.alsacreations.com/article/lire/539-Centrer-les-elements-ou-un-si
   bottom: 0;
   left: 0;
   transition-duration: 3s;
+}
+
+/* Animation du MENU (Entrées, Plats, Desserts) ------------------------------------------------ */
+
+/* Pour chaque Article du menu: 
+  - on applique l'animation "kf_menu-elements"
+  - pour une durée de 5s
+  - dans un délai différé de 1s
+*/
+.c_menu__article--animation {
+  animation-name: kf_menu-elements;
+  animation-duration: 5s;
+  animation-fill-mode: backwards;
+  /* on garde les valeurs calculées lors de la 1ère étape de "kf_menu-elements" */
+  /* backwards : applique les propriétés CSS de la première image clé (0% ou from), même s'il y a un délai d'attente (animation-delay) */
+  animation-delay: 1s;
+  /* définit la durée d'attente avant de démarrer l'animation */
+}
+
+/* Pour chaque élément du menu: 
+    - étape initiale: le rendre invisible & le translater du haut vers le bas de 50px  
+    - étape finale: le rendre visible & le placer à sa position Y initiale
+*/
+@keyframes kf_menu-elements {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 
