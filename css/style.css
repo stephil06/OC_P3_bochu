@@ -67,7 +67,6 @@ body {
 /* ------------------------------------------------------- (page d'accueil index.html) ------------------------------------------------------- */
 /* ------------------------------------------------------------------------------------------------------------------------------------------- */
 
-
 /* Header -------------------------------------------------------------------------------------------- */
 /* NB: Header commun à toutes les pages SAUF: ajout du Picto "flèche gauche" pour les 4 pages de menu  */
 
@@ -75,6 +74,7 @@ body {
  - mettre son enfant (i.e le <h1> Logo) en Ligne & le centrer
  - tailler sa largeur & sa hauteur
  - poser une marge interne Haute & Bas de 10px
+ - poser une position "relative" pour placer son enfant (i.e le <a> (du <header>) représenté par le Picto "flèche gauche")
 */
 header {
   display: flex;
@@ -95,7 +95,8 @@ header {
 /* Pour le <a> (du <header>) (représenté par le Picto "flèche gauche"):
   - tailler le Picto
   - le mettre en Noir
-  - le décaler à gauche (soit 0px de la marge gauche) & le décaler en bas de 20px, par rapport à son Père (i.e le <header>)
+  - poser un "position: absolute" en rapport à son Père (i.e le <header>)
+  - le décaler à gauche (soit à 0px de la marge gauche) & le décaler en bas de 20px, par rapport à son Père (i.e le <header>)
   - poser une marge externe Gauche de 25px
 */
 header a {
@@ -135,9 +136,9 @@ footer h2 {
   height: 50px;
   /* 110px - 60px */
 
-  border-top: 4px solid #d8d8d8;
   background-color: #eaeaea;
-  margin-top: 0px;
+  border-top: 4px solid #d8d8d8;
+  margin-top: 0;
   margin-bottom: -10px;
   padding-bottom: 10px;
 }
@@ -191,6 +192,7 @@ footer h2 {
 Pour le bouton "Explorer" ou "Commander":
   - mettre le fond en dégradé (de Violet vers Rose)
   - mettre le texte en blanc
+  - mettre une ombre grise
   - mettre 4 arrondis
   - oter la bordure
   - tailler la Police
@@ -208,18 +210,17 @@ Pour le bouton "Explorer" ou "Commander":
   box-shadow: 10px 10px 20px #C7C7C7;
   /* décalage x (de l'ombre); décalage y (de l'ombre); épaisseur de l'ombre */
 
+  border-radius: 80px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+
   /* MEN0909_debut */
   /* padding: 20px 50px; */
   padding: 20px 20px;
   /* vertical | horizontal */
   /* MEN0909_fin */
-
   /* vertical (1357px - 1337px) ; horizontal (280px - 230px) */
-  border-radius: 80px;
-  border: none;
-
-  font-size: 16px;
-  cursor: pointer;
 }
 
 /*
@@ -254,7 +255,7 @@ NB: Le choix de la teinte + claire ou + foncée a été effectué via https://ww
 }
 
 /* Pour le <ol> : 
-  - placer ses enfants (i.e <li>) en colonne avec un gap de 20px
+  - placer ses enfants (i.e <li>) en colonne
   - oter la marge interne gauche
 */
 .c_section-fonctionnement ol {
@@ -265,7 +266,6 @@ NB: Le choix de la teinte + claire ou + foncée a été effectué via https://ww
   justify-content: space-around;
   /* background : green; */
 
-  /* 600px - 580px */
   padding-left: 0;
 
   height: 290px;
@@ -420,7 +420,6 @@ NB: Le choix de la teinte + claire ou + foncée a été effectué via https://ww
   flex-direction: row;
   justify-content: space-around;
   width: 50%;
-  /* 250px; */
   /* pour rendre elastic */
 
   text-decoration: none;
@@ -458,9 +457,8 @@ NB: Le choix de la teinte + claire ou + foncée a été effectué via https://ww
   - poser 4 arrondis
   - poser une ombre noir
   - poser des marges externes à 15px
-  - poser une position "relative" pour placer ses enfants "Nouveau" &  Picto évaluation ("coeur")
   - mettre le fond en Blanc
-
+  - poser une position "relative" pour placer ses enfants "Nouveau" &  Picto évaluation ("coeur")
 */
 .c_section-restaurants__article {
   display: flex;
@@ -472,8 +470,8 @@ NB: Le choix de la teinte + claire ou + foncée a été effectué via https://ww
   margin: 0 var(--section-restaurants_marge) var(--section-restaurants_marge) var(--section-restaurants_marge);
   /* haut droit bas gauche */
 
-  position: relative;
   background-color: var(--couleur_fond_primaire);
+  position: relative;
 }
 
 /* Pour chaque <a>: 
@@ -490,8 +488,10 @@ NB: Le choix de la teinte + claire ou + foncée a été effectué via https://ww
   - mettre le fond en vert
   - mettre la couleur du Texte en vert foncé & en Gras
   - poser des marges internes
+  - poser 4 arrondis
   - centrer son texte
-  - le placer par rapport à son Père (i.e Article) à 15px à droite & à 15px en haut 
+  - poser un "position: absolute" en rapport à son Père (i.e "c_section-restaurants__article")
+  - le placer par rapport à son Père (i.e "c_section-restaurants__article") à 15px à droite & à 15px en haut 
 */
 .c_section-restaurants__article__span-nouveau {
   width: 80px;
@@ -505,7 +505,7 @@ NB: Le choix de la teinte + claire ou + foncée a été effectué via https://ww
   /* MEN0909_debut : l'étiquette nouveau a trop de marge -> bottom */
   /* padding: 5px; */
   /* padding-top: 5px;*/
-  padding-bottom: 0px;
+  padding-bottom: 0;
   line-height: 1.8;
   border-radius: 5px;
   /* MEN0909_fin */
@@ -540,7 +540,7 @@ NB: Le choix de la teinte + claire ou + foncée a été effectué via https://ww
   padding-left: 10px;
 }
 
-
+/* Pour le <p>: mettre en gris sombre */
 .c_section-restaurants__article__div-description p {
   color: #303030;
 }
@@ -548,13 +548,12 @@ NB: Le choix de la teinte + claire ou + foncée a été effectué via https://ww
 /* Pour le Picto évaluation ("coeur") 
     - tailler sa largeur & sa hauteur
     - mettre le curseur en forme de "main"
+    - poser un "position: absolute" en rapport à son Père (i.e "c_section-restaurants__article")
     - le placer par rapport à son Père (i.e Article) à 15px à droite & 25px en bas
 */
 .c_section-restaurants__article__div-description .c_button-coeur {
   width: 35px;
-  /* 45px; */
   height: 35px;
-  /* 45px; */
   cursor: pointer;
 
   position: absolute;
@@ -563,13 +562,6 @@ NB: Le choix de la teinte + claire ou + foncée a été effectué via https://ww
   /* 15px à droite par rapport à son Père (i.e Article) */
   bottom: 25px;
   /* 25px en Bas par rapport à son Père (i.e Article) */
-}
-
-/* Au survol de la souris sur le Picto coeur : mettre le fond en Dégradé Violet Rose  */
-.ZZc_section-restaurants__article__div-description .fa-heart:hover {
-  /* Un dégradé (commençant en bas à droite et) allant jusqu'au coin gauche supérieur,
-   commençant en --couleur_primaire et finissant en --couleur_secondaire. */
-  background: linear-gradient(to left top, var(--couleur_primaire), var(--couleur_secondaire));
 }
 
 /* (index.html) fin <section> "restaurants" ---------------------------------------------------------------------- */
@@ -591,7 +583,7 @@ footer {
   /* haut ; droit ; bas ; gauche */
 }
 
-/* mettre son Titre en Blanc */
+/* Mettre son Titre en Blanc & en Italic */
 footer h2 {
   color: var(--couleur_texte_secondaire);
   font-style: italic;
@@ -656,15 +648,14 @@ footer address {
 /* Concernant la photo du restaurant: 
   - tailler sa largeur
   - tailler sa hauteur
-  - la décaler vers le haut (de 220px) par rapport à son Père (i.e "c_section-menu")
+  - poser un "position: absolute" en rapport à son Père (i.e "c_section-menu") avec un top à 60px
 */
 .c_img-menu {
   width: 100%;
   height: 250px;
   /* 310px - 60px */
-
   position: absolute;
-  margin-top: -220px;
+  top: 60px;
 }
 
 /* <section> "menu" ---------------------------------------------------------------------------------------------- */
@@ -678,7 +669,6 @@ footer address {
 .c_section-menu h2 {
   font-family: "Shrikhand", sans-serif;
   font-size: 28px;
-  /* 36px; */
   font-style: normal;
 }
 
@@ -690,6 +680,7 @@ footer address {
     - poser 2 arrondis Haut
     - la placer à 220px de Hauteur
     - poser 1 marge interne Bas (de 155px)
+    - mettre position: "relative" pour le placement de ses enfants (i.e "c_img-menu" & "c_button-explorer-ou-commander")
 */
 .c_section-menu {
   background-color: var(--couleur_fond_secondaire);
@@ -698,12 +689,12 @@ footer address {
   margin-top: 220px;
   /* 285px - 65px */
 
-  position: relative;
   padding-bottom: 155px;
   /* 1445px - 1290px */
+  position: relative;
 }
 
-/* - placer ses enfants (i.e. <h> & Picto "coeur") aux extrémités
+/* - placer ses enfants (i.e <h> & Picto "coeur") aux extrémités
   - poser 1 marge interne Haute (de 10px)
   - mettre en Italic & gras
 */
@@ -743,6 +734,7 @@ footer address {
   - tailler sa hauteur
   - poser 4 arrondis
   - poser les marges externes
+  - mettre position: "relative" pour le placement de son enfant (i.e "c_button-choisir")
 */
 .c_section-entrees__article,
 .c_section-plats__article,
@@ -811,7 +803,8 @@ footer address {
   - tailler sa Largeur & sa Hauteur
   - poser 2 arrondis à droite (Haut & Bas)
   - oter la bordure
-  - par rapport à son Père (i.e c_section-...__article): poser un top & right à 0
+  - poser un "position: absolute" en rapport à son Père (i.e "c_section-...__article")
+  - par rapport à son Père (i.e "c_section-...__article"): poser un top & right à 0
   - mettre le curseur en forme de "main"
 */
 .c_button-choisir {
@@ -844,6 +837,7 @@ footer address {
 
 /* Centrer le bouton "Commander" & Retailler sa Largeur
 cf. https://www.alsacreations.com/article/lire/539-Centrer-les-elements-ou-un-site-web-en-CSS.html
+- poser un "position: absolute" en rapport à son Père (i.e "c_section-menu")
 */
 .c_button-explorer-ou-commander--placer {
   padding: 20px 50px;
@@ -853,7 +847,7 @@ cf. https://www.alsacreations.com/article/lire/539-Centrer-les-elements-ou-un-si
   /* postulat de départ */
   top: 92%;
   left: 50%;
-  /* à 50%/50% du parent référent */
+  /* à 50%, 50% du parent référent */
   transform: translate(-50%, -50%);
   /* décalage de 50% de sa propre taille */
 }
@@ -918,7 +912,6 @@ cf. https://www.alsacreations.com/article/lire/539-Centrer-les-elements-ou-un-si
   - sur le cercle, on crée 4 bordures (avec pour chaque Bordure une couleur de la charte graphique) 
 */
 .c_loading-spinner--cercle {
-  /* .loader-spinner-logo { */
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -930,9 +923,9 @@ cf. https://www.alsacreations.com/article/lire/539-Centrer-les-elements-ou-un-si
 }
 
 /* on place le "loading spinner" au milieu de la page:
-  - on met position: "absolute" : i.e. sa position est définie par rapport au coin supérieur gauche de la page
+  - poser un "position: absolute" en rapport à son Père (i.e "c_page--colorer-fond")
   - (avec top right bottom left à 0), on le place dans le coin supérieur gauche de la page
-  - (avec margin: auto), on le place au centre de la page (=> même si on scroll la barre verticale, sa position au centre de la page est maintenue)
+  - (avec margin: auto), on le place au milieu de la page (=> même si on scroll la barre verticale, sa position au milieu de la page est maintenue)
   */
 .c_loading-spinner--placer-milieu {
   position: absolute;
@@ -944,7 +937,7 @@ cf. https://www.alsacreations.com/article/lire/539-Centrer-les-elements-ou-un-si
 }
 
 /* on applique 1 animation "kf_rotate": 
-    - on fait tourner le cercle (dans le sens des aiguilles d'une montre
+    - on fait tourner le cercle (dans le sens des aiguilles d'une montre)
     - pendant 1 seconde à vitesse constante
 */
 .c_loading-spinner--animation {
@@ -966,19 +959,19 @@ cf. https://www.alsacreations.com/article/lire/539-Centrer-les-elements-ou-un-si
 
 /* Bouton "coeur" -------------------------------------------------------------------------------------- */
 /* on style le bouton "coeur":
-  - on met position: "relative" pour le placement de ses enfants (i.e "c_coeur-vide" & "c_coeur-plein")
   - on met le Fond "transparent"
   - on taille sa Largeur & sa Hauteur (pour délimiter la zone cliquable)
   - on met le curseur en forme de "main"
   - on ote la bordure
+  - on met position: "relative" pour le placement de ses enfants (i.e "c_coeur-vide" & "c_coeur-plein")
 */
 .c_button-coeur {
-  position: relative;
   background-color: transparent;
   width: 30px;
   height: 30px;
   cursor: pointer;
   border: none;
+  position: relative;
 }
 
 /* Pour le coeur-vide: 
@@ -992,7 +985,7 @@ cf. https://www.alsacreations.com/article/lire/539-Centrer-les-elements-ou-un-si
 }
 
 /* Pour le coeur-plein : 
-  - on met position: "absolute" pour le placer par rapport à son Père (i.e c_button-coeur)
+  - on met position: "absolute" pour le placer par rapport à son Père (i.e "c_button-coeur")
   - on le place à la pointe basse du coeur
   - on met son Fond en dégradé : --couleur_secondaire (i.e Rose) puis --couleur_primaire (i.e Violet) en Haut
   - on met sa taille à la moitié du coeur vide (i.e 16px)
@@ -1020,7 +1013,7 @@ cf. https://www.alsacreations.com/article/lire/539-Centrer-les-elements-ou-un-si
 /* Au clic sur le bouton "coeur": on style le coeur plein, i.e :
   - on le rend visible (via opacity: 1)
   - on double sa taille (via font-size: 2em)
-  - on le place aux coordonnées du coeur vide i.e. bottom:0;  left: 0;
+  - on le place aux coordonnées du coeur vide (i.e. bottom:0;  left: 0;)
   - durée de l'animation: 3s
 */
 .c_button-coeur:hover .c_coeur-plein {
@@ -1131,11 +1124,9 @@ cf. https://www.alsacreations.com/article/lire/539-Centrer-les-elements-ou-un-si
     padding-bottom: 0;
   }
 
-  /* ZZmain:not(.div__localisation-restaurants):not(.c_section-presentation) { */
-
   /* Placer les <section> "fonctionnement" & "restaurants": 
     - en ligne & aux extrémités
-    - avec 1 marge externe Gauche & droite de 20px 
+    - avec 1 marge externe Gauche & Droite de 20px 
   */
   .div-fonctionnement-et-restaurants {
     display: flex;
