@@ -798,43 +798,6 @@ footer address {
 
 /* MEN0909_fin */
 
-/* Pour le bouton "choisir": 
-  - mettre le fond en Vert
-  - tailler sa Largeur & sa Hauteur
-  - poser 2 arrondis à droite (Haut & Bas)
-  - oter la bordure
-  - poser un "position: absolute" en rapport à son Père (i.e "c_section-...__article")
-  - par rapport à son Père (i.e "c_section-...__article"): poser un top à 0 & un right à -1000px pour le faire disparaître
-  - mettre le curseur en forme de "main"
-*/
-.c_button-choisir {
-  display: none;
-  background-color: var(--couleur_tertiaire);
-  width: 60px;
-  /* 365px - 305px */
-  height: 100%;
-
-  border-radius: 0 20px 20px 0;
-  /* H D B G */
-  border: none;
-
-  position: absolute;
-  top: 0;
-  right: 0;
-  cursor: pointer;
-}
-
-/* Mettre le cercle en Blanc & tailler sa Font */
-.fa-check-circle {
-  color: var(--couleur_texte_secondaire);
-  font-size: 20px;
-}
-
-/* Rendre visible le bouton "choisir" */
-.c_button-choisir--visible {
-  display: block;
-}
-
 /* Centrer le bouton "Commander" & Retailler sa Largeur
 cf. https://www.alsacreations.com/article/lire/539-Centrer-les-elements-ou-un-site-web-en-CSS.html
 - poser un "position: absolute" en rapport à son Père (i.e "c_section-menu")
@@ -1056,6 +1019,76 @@ cf. https://www.alsacreations.com/article/lire/539-Centrer-les-elements-ou-un-si
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* Animation du bouton "c_button-choisir" -------------------------------------------------------------------------------- */
+
+/* Pour le bouton "c_button-choisir": 
+  - mettre le fond en Vert
+  - tailler sa Largeur & sa Hauteur
+  - poser 2 arrondis à droite (Haut & Bas)
+  - oter la bordure
+  - poser un "position: absolute" en rapport à son Père (i.e "c_section-...__article" où "..."= "entrees" ou "plats" ou "desserts")
+  - par rapport à son Père (i.e "c_section-...__article"): poser un top à 0 & un right à -60px pour le placer juste à droite de l'Article
+*/
+.c_button-choisir {
+  opacity: 1;
+  background-color: var(--couleur_tertiaire);
+  width: 60px;
+  /* 365px - 305px */
+  height: 75px;
+  border-radius: 0 20px 20px 0;
+  /* H D B G */
+  border: none;
+
+  position: absolute;
+  top: 0;
+  right: -60px;
+}
+
+/* Pour le Picto "fa-check-circle": 
+  - mettre le fond du cercle en Blanc 
+  - appliquer 1 Rotation de +180 degres pour déplacer la coche vers le Bas
+  - appliquer 1 "transition-duration de 5s" pour ralentir la Rotation de la coche
+*/
+.fa-check-circle {
+  color: var(--couleur_fond_primaire);
+  font-size: 20px;
+  transform: rotate(+180deg);
+  transition-duration: 5s;
+}
+
+/* Pour chaque <Article> du menu, au survol de la souris sur l'article: 
+  - placer le "c_button-choisir" à Droite de 0px par rapport à son Père (i.e le <article>)
+  - appliquer 1 "transition-duration de 3s" pour ralentir le déplacement du bouton "choisir"
+*/
+.c_section-entrees__article:hover .c_button-choisir,
+.c_section-plats__article:hover .c_button-choisir,
+.c_section-desserts__article:hover .c_button-choisir {
+  right: 0;
+  transition-duration: 3s;
+  opacity: 1;
+}
+
+/* Pour chaque <Article> du menu, au survol de la souris sur l'article: 
+  - appliquer 1 rotation pour le "fa-check-circle" (sens inverse des aiguilles d'une montre) de sorte à avoir la coche bien placée (soit -10°)
+*/
+.c_section-entrees__article:hover .fa-check-circle,
+.c_section-plats__article:hover .fa-check-circle,
+.c_section-desserts__article:hover .fa-check-circle
+{
+  /* opacity:1; */
+  transform: rotate(-10deg);
+}
+
+/* Pour chaque <Article> du menu, au survol de la souris sur l'article: 
+  - décaler le prix (enveloppé dans <strong>) de 65px vers la gauche
+*/
+.c_section-entrees__article:hover strong,
+.c_section-plats__article:hover strong,
+.c_section-desserts__article:hover strong
+{
+  margin-right: 65px;
 }
 
 
