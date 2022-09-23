@@ -957,13 +957,6 @@ cf. https://www.alsacreations.com/article/lire/539-Centrer-les-elements-ou-un-si
   - on le rend invisible (via opacity: 0)
 */
 
-/*
-@supports (display: grid) {
-  div {
-    display: grid;
-  }
-}
-*/
 .c_coeur-plein {
   position: absolute;
   bottom: 0;
@@ -972,17 +965,12 @@ cf. https://www.alsacreations.com/article/lire/539-Centrer-les-elements-ou-un-si
   background: linear-gradient(to top, var(--couleur_secondaire), var(--couleur_primaire));
   font-size: 16px;
 
-
-  /* on ote le contour externe */;
-
-  background-clip: text;
-  /* -webkit-background-clip: text; */
-  color: transparent;
+  /* on ote le contour externe */
   
+  /* -webkit-background-clip: text; */ 
   /* -webkit-text-fill-color: transparent; */
-
-  /* -moz-background-clip: text; */
-  /* -moz-text-fill-color: transparent; */ 
+  background-clip: text;
+  color: transparent;
 
   opacity: 0;
 }
