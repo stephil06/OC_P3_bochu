@@ -1032,7 +1032,7 @@ cf. https://www.alsacreations.com/article/lire/539-Centrer-les-elements-ou-un-si
   - par rapport à son Père (i.e "c_section-...__article"): poser un top à 0 & un right à -60px pour le placer juste à droite de l'Article
 */
 .c_button-choisir {
-  opacity: 1;
+  opacity: 1; /* 0; */
   background-color: var(--couleur_tertiaire);
   width: 60px;
   /* 365px - 305px */
@@ -1048,13 +1048,13 @@ cf. https://www.alsacreations.com/article/lire/539-Centrer-les-elements-ou-un-si
 
 /* Pour le Picto "fa-check-circle": 
   - mettre le fond du cercle en Blanc 
-  - appliquer 1 Rotation de +180 degres pour déplacer la coche vers le Bas
+  - appliquer 1 Rotation de 0 degre (étape initiale pour bien placer la coche)
   - appliquer 1 "transition-duration de 5s" pour ralentir la Rotation de la coche
 */
 .fa-check-circle {
   color: var(--couleur_fond_primaire);
   font-size: 20px;
-  transform: rotate(+180deg);
+  transform: rotate(0deg); /* rotate(-180deg); */
   transition-duration: 5s;
 }
 
@@ -1066,29 +1066,30 @@ cf. https://www.alsacreations.com/article/lire/539-Centrer-les-elements-ou-un-si
 .c_section-plats__article:hover .c_button-choisir,
 .c_section-desserts__article:hover .c_button-choisir {
   right: 0;
-  transition-duration: 3s;
+  transition-duration: 5s;
   opacity: 1;
 }
 
 /* Pour chaque <Article> du menu, au survol de la souris sur l'article: 
-  - appliquer 1 rotation pour le "fa-check-circle" (sens inverse des aiguilles d'une montre) de sorte à avoir la coche bien placée (soit -10°)
+  - appliquer 1 rotation pour le "fa-check-circle" (+360° sens des aiguilles d'une montre) de sorte à avoir la coche bien placée (état initial)
 */
 .c_section-entrees__article:hover .fa-check-circle,
 .c_section-plats__article:hover .fa-check-circle,
 .c_section-desserts__article:hover .fa-check-circle
 {
   /* opacity:1; */
-  transform: rotate(-10deg);
+  transform: rotate(+360deg);
 }
 
 /* Pour chaque <Article> du menu, au survol de la souris sur l'article: 
   - décaler le prix (enveloppé dans <strong>) de 65px vers la gauche
+  - appliquer 1 "transition-duration de 3s" pour ralentir le "déplacement du prix"
 */
 .c_section-entrees__article:hover strong,
 .c_section-plats__article:hover strong,
 .c_section-desserts__article:hover strong
 {
-  margin-right: 65px;
+  padding-right: 60px; transition-duration: 3s;
 }
 
 
