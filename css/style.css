@@ -3,9 +3,9 @@
   - Logo et titres: Shrikhand
   - Texte: Roboto
 */
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css');
+/* @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css');
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap"); */
 
 
 /* Déclaration des variables -----------------------------------------------------------------  */
@@ -956,6 +956,14 @@ cf. https://www.alsacreations.com/article/lire/539-Centrer-les-elements-ou-un-si
   - on ote le contour externe cf. https://openclassrooms.com/forum/sujet/linear-gradient-sur-icone-font-awesome
   - on le rend invisible (via opacity: 0)
 */
+
+/*
+@supports (display: grid) {
+  div {
+    display: grid;
+  }
+}
+*/
 .c_coeur-plein {
   position: absolute;
   bottom: 0;
@@ -964,12 +972,17 @@ cf. https://www.alsacreations.com/article/lire/539-Centrer-les-elements-ou-un-si
   background: linear-gradient(to top, var(--couleur_secondaire), var(--couleur_primaire));
   font-size: 16px;
 
-  /* on ote le contour externe */
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 
-  -moz-background-clip: text;
-  -moz-text-fill-color: transparent;
+  /* on ote le contour externe */;
+
+  background-clip: text;
+  /* -webkit-background-clip: text; */
+  color: transparent;
+  
+  /* -webkit-text-fill-color: transparent; */
+
+  /* -moz-background-clip: text; */
+  /* -moz-text-fill-color: transparent; */ 
 
   opacity: 0;
 }
@@ -1089,7 +1102,7 @@ cf. https://www.alsacreations.com/article/lire/539-Centrer-les-elements-ou-un-si
 .c_section-plats__article:hover strong,
 .c_section-desserts__article:hover strong
 {
-  padding-right: 60px; transition-duration: 3s;
+  padding-right: 65px; transition-duration: 3s;
 }
 
 
