@@ -969,8 +969,8 @@ cf. https://www.alsacreations.com/article/lire/539-Centrer-les-elements-ou-un-si
   font-size: 16px;
 
   /* on ote le contour externe */
-    -webkit-background-clip: text; 
-    /* -webkit-text-fill-color: transparent; */
+  -webkit-background-clip: text;
+  /* -webkit-text-fill-color: transparent; */
   /* background-clip: text; */
   color: transparent;
 
@@ -1122,7 +1122,7 @@ cf. https://www.alsacreations.com/article/lire/539-Centrer-les-elements-ou-un-si
 }
 
 /* MEN0923 */
-/* Cacher le bouton "c_button-choisir" :
+/* Cacher le bouton "c_button-choisir":
   <=> appliquer "overflow: hidden" sur son Père */
 .c_section-entrees__article,
 .c_section-plats__article,
@@ -1141,8 +1141,18 @@ cf. https://www.alsacreations.com/article/lire/539-Centrer-les-elements-ou-un-si
   cursor: pointer;
 }
 
-
 /* MEN0923 fin */
+
+/* Pour chaque 1er <p> de "c_section-i__article__div-description" où "i"= "entrees", "plats", "desserts" 
+  tronquer le texte avec "..."
+*/
+/* .c_section-entrees__article__div-description */
+
+.c_section-entrees__article__div-description p:nth-child(1) {
+  color: green;
+  text-overflow: ellipsis;
+}
+
 
 /* ------------------------------------------------------------------------------------------------------------------------------------------- */
 /* ------------------------------------------------------- (MEDIAQUERIES) -------------------------------------------------------------------- */
