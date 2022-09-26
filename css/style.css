@@ -766,9 +766,10 @@ footer address {
   /* MEN0909_fin */
 
   /* MEN0909_debut: Réduire l'espace entre les deux lignes */
-  padding-top: 10px;
+  /* padding-top: 10px; */
   margin-left: 15px;
-  margin-bottom: 20px;
+  margin-top: 15px;
+  /* margin-bottom: 20px; */
   /* MEN0909_fin */
 }
 
@@ -968,10 +969,9 @@ cf. https://www.alsacreations.com/article/lire/539-Centrer-les-elements-ou-un-si
   font-size: 16px;
 
   /* on ote le contour externe */
-
-  /* -webkit-background-clip: text; */
-  /* -webkit-text-fill-color: transparent; */
-  background-clip: text;
+    -webkit-background-clip: text; 
+    /* -webkit-text-fill-color: transparent; */
+  /* background-clip: text; */
   color: transparent;
 
   opacity: 0;
@@ -1051,6 +1051,7 @@ cf. https://www.alsacreations.com/article/lire/539-Centrer-les-elements-ou-un-si
   - oter la bordure
   - poser un "position: absolute" en rapport à son Père (i.e "c_section-...__article" où "..."= "entrees" ou "plats" ou "desserts")
   - par rapport à son Père (i.e "c_section-...__article"): poser un top à 0 & un right à -60px pour le placer juste à droite de l'Article
+  - mettre le curseur sous forme d'une "main" (cf. maquette fournie)
 */
 .c_button-choisir {
   opacity: 1;
@@ -1066,6 +1067,8 @@ cf. https://www.alsacreations.com/article/lire/539-Centrer-les-elements-ou-un-si
   position: absolute;
   top: 0;
   right: -60px;
+
+  cursor: pointer;
 }
 
 /* Pour le Picto "fa-check-circle": 
@@ -1117,6 +1120,29 @@ cf. https://www.alsacreations.com/article/lire/539-Centrer-les-elements-ou-un-si
   transition-duration: 1s;
   /* MEN0923 fin */
 }
+
+/* MEN0923 */
+/* Cacher le bouton "c_button-choisir" :
+  <=> appliquer "overflow: hidden" sur son Père */
+.c_section-entrees__article,
+.c_section-plats__article,
+.c_section-desserts__article {
+  overflow: hidden;
+}
+/* MEN0923 fin */
+
+/* Pour chaque <Article> du menu, au survol de la souris sur l'article: 
+    Mettre le curseur sous forme d'une "main" 
+ cf. vidéo fournie   
+*/
+.c_section-entrees__article:hover,
+.c_section-plats__article:hover,
+.c_section-desserts__article:hover {
+  cursor: pointer;
+}
+
+
+/* MEN0923 fin */
 
 /* ------------------------------------------------------------------------------------------------------------------------------------------- */
 /* ------------------------------------------------------- (MEDIAQUERIES) -------------------------------------------------------------------- */
