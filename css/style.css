@@ -848,10 +848,12 @@ cf. https://www.alsacreations.com/article/lire/539-Centrer-les-elements-ou-un-si
 /* on applique une animation "kf_fond-opaque-a-transparent", consistant à mettre le Fond Transparent (à l'étape finale)
  */
 .c_page--animation-fond-opaque-a-transparent {
-  animation: kf_fond-opaque-a-transparent 4s;
+  animation: kf_fond-opaque-a-transparent 1s;
+  /* MEN0923 4s; */
   animation-fill-mode: forwards;
   /* on garde les valeurs calculées lors de la dernière étape de l'animation, i.e opacity: 0 */
-  animation-delay: 2s;
+  animation-delay: 1.5s;
+  /* MEN0923 2s; */
   /* différer le départ de la durée voulue */
 }
 
@@ -966,8 +968,8 @@ cf. https://www.alsacreations.com/article/lire/539-Centrer-les-elements-ou-un-si
   font-size: 16px;
 
   /* on ote le contour externe */
-  
-  /* -webkit-background-clip: text; */ 
+
+  /* -webkit-background-clip: text; */
   /* -webkit-text-fill-color: transparent; */
   background-clip: text;
   color: transparent;
@@ -998,11 +1000,13 @@ cf. https://www.alsacreations.com/article/lire/539-Centrer-les-elements-ou-un-si
 */
 .c_menu__article--animation {
   animation-name: kf_menu-elements;
-  animation-duration: 5s;
+  animation-duration: 3s;
+  /* MEN0923 5s; */
   animation-fill-mode: backwards;
   /* on garde les valeurs calculées lors de la 1ère étape de "kf_menu-elements" */
   /* backwards : applique les propriétés CSS de la première image clé (0% ou from), même s'il y a un délai d'attente (animation-delay) */
-  animation-delay: 1s;
+  animation-delay: 0.5s;
+  /* MEN0923 1s; */
   /* définit la durée d'attente avant de démarrer l'animation */
 }
 
@@ -1022,6 +1026,22 @@ cf. https://www.alsacreations.com/article/lire/539-Centrer-les-elements-ou-un-si
   }
 }
 
+/* MEN0923 : Plats – Apparition : faire un décalage entre les entrées - plats - desserts
+*/
+.c_section-entrees__article {
+  animation-delay: 0.5s;
+}
+
+.c_section-plats__article {
+  animation-delay: 1.5s;
+}
+
+.c_section-desserts__article {
+  animation-delay: 2.5s;
+}
+
+/* MEN0923 fin */
+
 /* Animation du bouton "c_button-choisir" -------------------------------------------------------------------------------- */
 
 /* Pour le bouton "c_button-choisir": 
@@ -1033,7 +1053,8 @@ cf. https://www.alsacreations.com/article/lire/539-Centrer-les-elements-ou-un-si
   - par rapport à son Père (i.e "c_section-...__article"): poser un top à 0 & un right à -60px pour le placer juste à droite de l'Article
 */
 .c_button-choisir {
-  opacity: 1; /* 0; */
+  opacity: 1;
+  /* 0; */
   background-color: var(--couleur_tertiaire);
   width: 60px;
   /* 365px - 305px */
@@ -1055,8 +1076,9 @@ cf. https://www.alsacreations.com/article/lire/539-Centrer-les-elements-ou-un-si
 .fa-check-circle {
   color: var(--couleur_fond_primaire);
   font-size: 20px;
-  transform: rotate(0deg); /* rotate(-180deg); */
-  transition-duration: 5s;
+  transform: rotate(0deg);
+  transition-duration: 1s;
+  /* MEN0923 5s; */
 }
 
 /* Pour chaque <Article> du menu, au survol de la souris sur l'article: 
@@ -1067,7 +1089,8 @@ cf. https://www.alsacreations.com/article/lire/539-Centrer-les-elements-ou-un-si
 .c_section-plats__article:hover .c_button-choisir,
 .c_section-desserts__article:hover .c_button-choisir {
   right: 0;
-  transition-duration: 5s;
+  transition-duration: 1s;
+  /* MEN0923 5s; */
   opacity: 1;
 }
 
@@ -1076,8 +1099,7 @@ cf. https://www.alsacreations.com/article/lire/539-Centrer-les-elements-ou-un-si
 */
 .c_section-entrees__article:hover .fa-check-circle,
 .c_section-plats__article:hover .fa-check-circle,
-.c_section-desserts__article:hover .fa-check-circle
-{
+.c_section-desserts__article:hover .fa-check-circle {
   /* opacity:1; */
   transform: rotate(+360deg);
 }
@@ -1088,11 +1110,13 @@ cf. https://www.alsacreations.com/article/lire/539-Centrer-les-elements-ou-un-si
 */
 .c_section-entrees__article:hover strong,
 .c_section-plats__article:hover strong,
-.c_section-desserts__article:hover strong
-{
-  padding-right: 65px; transition-duration: 3s;
+.c_section-desserts__article:hover strong {
+  padding-right: 65px;
+  /* MEN0923 transition-duration: 3s; 
+  "le check doit pousser le prix" */
+  transition-duration: 1s;
+  /* MEN0923 fin */
 }
-
 
 /* ------------------------------------------------------------------------------------------------------------------------------------------- */
 /* ------------------------------------------------------- (MEDIAQUERIES) -------------------------------------------------------------------- */
