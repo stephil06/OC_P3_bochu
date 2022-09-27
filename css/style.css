@@ -1129,6 +1129,7 @@ cf. https://www.alsacreations.com/article/lire/539-Centrer-les-elements-ou-un-si
 .c_section-desserts__article {
   overflow: hidden;
 }
+
 /* MEN0923 fin */
 
 /* Pour chaque <Article> du menu, au survol de la souris sur l'article: 
@@ -1143,16 +1144,21 @@ cf. https://www.alsacreations.com/article/lire/539-Centrer-les-elements-ou-un-si
 
 /* MEN0923 fin */
 
+/* MEN0923 */
 /* Pour chaque 1er <p> de "c_section-i__article__div-description" où "i"= "entrees", "plats", "desserts" 
   tronquer le texte avec "..."
 */
-/* .c_section-entrees__article__div-description */
-
-.c_section-entrees__article__div-description p:nth-child(1) {
-  color: green;
+.c_section-entrees__article__div-description p:nth-child(1),
+.c_section-plats__article__div-description p:nth-child(1),
+.c_section-desserts__article__div-description p:nth-child(1) {
+  /*  "ellipsis" pour ajouter des points de suspensions "..." à la fin du texte tronqué */
   text-overflow: ellipsis;
+  /* interdire le texte de sortir du conteneur */
+  overflow: hidden;
+  /* interdire le texte de se mettre sur plusieurs lignes */
+  white-space: nowrap;
 }
-
+/* MEN0923 fin */
 
 /* ------------------------------------------------------------------------------------------------------------------------------------------- */
 /* ------------------------------------------------------- (MEDIAQUERIES) -------------------------------------------------------------------- */
