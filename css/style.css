@@ -126,6 +126,7 @@ footer h2 {
     - tailler sa hauteur sur 50px
     - mettre le fond en gris foncé
     - placer 1 bordure top Gris encore plus foncé
+    - mettre en gras
 */
 .div__localisation-restaurants {
   display: flex;
@@ -140,12 +141,19 @@ footer h2 {
   border-top: 4px solid #d8d8d8;
   margin-top: 0;
   margin-bottom: -10px;
-  padding-bottom: 10px;
+  padding-bottom: 10px;  
+  font-weight: bold;
 }
 
-/* Pour le picto "localisation": poser une marge interne droite de 20px */
+/* Pour le picto "localisation":
+  - poser une marge externe Gauche de -40px (pour l'aligner par rapport au titre <h1>ohmyfood
+  - poser une marge interne Droite de 20px
+  - poser une marge interne Bas de 5px
+*/
 .div__localisation-restaurants .fa-map-marker-alt {
-  padding-right: 20px;
+  margin-left: -40px;
+  padding-right: 15px;
+  padding-bottom: 5px;
 }
 
 /* (index.html) <section> "Présentation" ------------------------------------------------------------------ */
@@ -1159,6 +1167,7 @@ cf. https://www.alsacreations.com/article/lire/539-Centrer-les-elements-ou-un-si
   /* interdire le texte de se mettre sur plusieurs lignes */
   white-space: nowrap;
 }
+
 /* MEN0923 fin */
 
 /* ------------------------------------------------------------------------------------------------------------------------------------------- */
