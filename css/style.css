@@ -970,8 +970,9 @@ cf. https://www.alsacreations.com/article/lire/539-Centrer-les-elements-ou-un-si
 
   /* on ote le contour externe */
   -webkit-background-clip: text;
-  /* -webkit-text-fill-color: transparent; */
-  /* background-clip: text; */
+  /* NB: - Au validateur, on a un Warning "La propriété -webkit-background-clip est une extension propriétaire" 
+        - https://caniuse.com/?search=-webkit-background-clip mentionne que cette propriété est OK sur FireFox & Chrome (dernière version)
+  */
   color: transparent;
 
   opacity: 0;
