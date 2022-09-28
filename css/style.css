@@ -1215,6 +1215,23 @@ cf. https://www.alsacreations.com/article/lire/539-Centrer-les-elements-ou-un-si
     width: 75%;
   }
 
+/* MEN0923_RWD : aligner chaque libellé par rapport au <h2>Fonctionnement</h2> */
+
+/* aligner chaque libellé par rapport au <h2>Fonctionnement</h2> */  
+  .c_section-fonctionnement__span-choisissez {
+    /* background-color: pink; */
+    margin-right: -25px;
+  }
+
+.c_section-fonctionnement__span-composez {
+  margin-right: -5px;
+}
+
+.c_section-fonctionnement__span-degustez {
+  margin-right: -10px;
+}
+/* MEN0923 fin */
+
   /* <section> "Restaurants" ---------------------------------------------------------------- */
 
   /* Centrer son titre */
