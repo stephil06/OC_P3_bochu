@@ -141,7 +141,7 @@ footer h2 {
   border-top: 4px solid #d8d8d8;
   margin-top: 0;
   margin-bottom: -10px;
-  padding-bottom: 10px;  
+  padding-bottom: 10px;
   font-weight: bold;
 }
 
@@ -1233,7 +1233,8 @@ cf. https://www.alsacreations.com/article/lire/539-Centrer-les-elements-ou-un-si
   /* Concernant le <footer>: centrer son titre */
   footer h2 {
     display: block;
-    margin-left: auto; margin-right: auto;
+    margin-left: auto;
+    margin-right: auto;
     width: 135px;
   }
 
@@ -1250,7 +1251,8 @@ cf. https://www.alsacreations.com/article/lire/539-Centrer-les-elements-ou-un-si
 
   /* Poser une marge externe de 15px */
   footer address {
-    margin-right:15px; /* background-color: red; */
+    margin-right: 15px;
+    /* background-color: red; */
   }
 
   /* --------------------------------------------------------------------------------------------- */
@@ -1319,12 +1321,14 @@ cf. https://www.alsacreations.com/article/lire/539-Centrer-les-elements-ou-un-si
   /* Pour chaque <li> (i.e Picto & Libellé): 
   - tailler sa Largeur 
   - mettre le fond en Blanc
-  - Tailler la Font
+  - tailler la Font
+  - interdire le texte de se mettre sur plusieurs lignes
   */
   .c_section-fonctionnement ol li {
     width: 90%;
     background-color: var(--couleur_fond_primaire);
     font-size: 20px;
+    white-space: nowrap;
   }
 
   /* <section> "Restaurants" ---------------------------------------------------------------- */
@@ -1400,7 +1404,8 @@ cf. https://www.alsacreations.com/article/lire/539-Centrer-les-elements-ou-un-si
   /* Concernant le <footer>: centrer son titre */
   footer h2 {
     display: block;
-    margin-left: auto; margin-right: auto;
+    margin-left: auto;
+    margin-right: auto;
     width: 135px;
   }
 
