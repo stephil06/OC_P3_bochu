@@ -1215,22 +1215,23 @@ cf. https://www.alsacreations.com/article/lire/539-Centrer-les-elements-ou-un-si
     width: 75%;
   }
 
-/* MEN0923_RWD : aligner chaque libellé par rapport au <h2>Fonctionnement</h2> */
+  /* MEN0923_RWD : aligner chaque libellé par rapport au <h2>Fonctionnement</h2> */
 
-/* aligner chaque libellé par rapport au <h2>Fonctionnement</h2> */  
+  /* aligner chaque libellé par rapport au <h2>Fonctionnement</h2> */
   .c_section-fonctionnement__span-choisissez {
     /* background-color: pink; */
     margin-right: -25px;
   }
 
-.c_section-fonctionnement__span-composez {
-  margin-right: -5px;
-}
+  .c_section-fonctionnement__span-composez {
+    margin-right: -5px;
+  }
 
-.c_section-fonctionnement__span-degustez {
-  margin-right: -10px;
-}
-/* MEN0923 fin */
+  .c_section-fonctionnement__span-degustez {
+    margin-right: -10px;
+  }
+
+  /* MEN0923 fin */
 
   /* <section> "Restaurants" ---------------------------------------------------------------- */
 
@@ -1424,6 +1425,106 @@ cf. https://www.alsacreations.com/article/lire/539-Centrer-les-elements-ou-un-si
     margin-left: auto;
     margin-right: auto;
     width: 135px;
+  }
+
+  /* --------------------------------------------------------------------------------------------- */
+  /* ------ Pages MENU --------------------------------------------------------------------------- */
+  /* --------------------------------------------------------------------------------------------- */
+
+  /* Pour l'image du restaurant:
+    - poser une marge externe Haute de 10px
+    - tailler sa Hauteur
+  */
+  .c_img-menu {
+    margin-top: 10px;
+    height: 480px;
+  }
+
+  /* Pour la section "menu": 
+    - tailler sa Largeur
+    - centrer
+    - poser une marge externe Haute de 450px
+  */
+  .c_section-menu {
+    width: 90%;
+    margin: auto;
+    margin-top: 450px;
+  }
+
+  /* Pour le <h2> i.e nom du restaurant: 
+    - tailler sa Font
+    - le centrer
+    - poser une marge interne Haute de 30px 
+  */
+  .c_section-menu h2 {
+    font-size: 32px;
+    width: 300px;
+    margin: auto;
+    padding-top: 30px;
+    /* background-color: pink; */
+  }
+
+  /* Pour le bouton "coeur": mettre un Top à 15px, pour le placer à 15px par rapport à son Père i.e "c_section-menu" */
+  .c_section-menu .c_button-coeur {
+    /* color: red; */
+    top: 15px;
+  }
+
+  /* Pour chaque <h3> parmi ENTREES, PLATS, ou DESSERTS: 
+    - tailler sa font
+    - poser une marge externe Gauche de 16%, pour s'aligner par rapport aux <article>
+  */
+  .c_section-entrees h3,
+  .c_section-plats h3,
+  .c_section-desserts h3 {
+    font-size: 20px;
+    margin-left: 16%;
+  }
+
+  /* Pour chaque <article>: 
+    - tailler sa Largeur
+    - tailler sa Hauteur
+    - le centrer
+    - poser une marge interne Bas de 10px
+  */
+  .c_section-entrees__article,
+  .c_section-plats__article,
+  .c_section-desserts__article {
+    width: 70%;
+    height: 70px;
+    margin: auto;
+    margin-bottom: 10px;
+  }
+
+  /* Concernant chaque <article>, pour son titre <h4>: 
+    - tailler sa font
+    - poser un espacement vertical
+  */
+  .c_section-entrees__article h4,
+  .c_section-plats__article h4,
+  .c_section-desserts__article h4 {
+    font-size: 20px;
+    line-height: 0.5;
+    /* color: red; */
+  }
+
+  /* Concernant chaque <article>, pour son 1er <p>: tailler sa font */
+  .c_section-entrees__article p:nth-child(1),
+  .c_section-plats__article p:nth-child(1),
+  .c_section-desserts__article p:nth-child(1) {
+    font-size: 16px;
+    /* color: green; */
+  }
+
+  /* Concernant chaque <article>, pour son 2eme <p> (i.e le prix): 
+    - tailler sa font
+    - poser un espacement vertical
+  */
+  .c_section-entrees__article p:nth-child(2),
+  .c_section-plats__article p:nth-child(2),
+  .c_section-desserts__article p:nth-child(2) {
+    font-size: 20px;
+    line-height: 0.5;
   }
 
 }
