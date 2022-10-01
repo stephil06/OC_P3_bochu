@@ -1284,6 +1284,13 @@ cf. https://www.alsacreations.com/article/lire/539-Centrer-les-elements-ou-un-si
 /* @media ORDINATEUR --------------------------------------------------------------------------------------------- */
 @media screen and (min-width: 992px) {
 
+  body {
+    max-width: 1920px;
+    /* Largeur de mon écran PC : 1920px */
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   /* --------------------------------------------------------------------------------------------- */
   /* ------ Page ACCUEIL index.html -------------------------------------------------------------- */
   /* --------------------------------------------------------------------------------------------- */
@@ -1458,10 +1465,8 @@ cf. https://www.alsacreations.com/article/lire/539-Centrer-les-elements-ou-un-si
   */
   .c_section-menu h2 {
     font-size: 32px;
-    width: 300px;
     margin: auto;
     padding-top: 30px;
-    /* background-color: pink; */
   }
 
   /* Pour le bouton "coeur": mettre un Top à 15px, pour le placer à 15px par rapport à son Père i.e "c_section-menu" */
