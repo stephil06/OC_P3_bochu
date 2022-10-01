@@ -355,30 +355,6 @@ NB: Le choix de la teinte + claire ou + foncée a été effectué via https://ww
   /* background-color: red; */
 }
 
-.ZZc_section-fonctionnement ol li .fa-tablet-alt {
-  padding-left: 15px;
-  margin-right: 10px;
-  background-color: red;
-}
-
-.ZZc_section-fonctionnement__span-choisissez {
-  background-color: green;
-}
-
-.ZZc_section-fonctionnement ol li .fa-list-ul {
-  padding-left: 10px;
-}
-
-.ZZc_section-fonctionnement__span-composez {
-  margin-left: -12px;
-  display: flex;
-  justify-content: right;
-  /* margin-left: 30px; margin-rigth:30px; */
-  width: 200px;
-  margin: auto;
-  background-color: pink;
-}
-
 /* Sur chaque <li>, au survol de la souris: mettre son Picto en violet */
 .c_section-fonctionnement ol li:hover .fa-tablet-alt,
 .c_section-fonctionnement ol li:hover .fa-list-ul,
@@ -981,6 +957,9 @@ cf. https://www.alsacreations.com/article/lire/539-Centrer-les-elements-ou-un-si
   /* NB: - Au validateur, on a un Warning "La propriété -webkit-background-clip est une extension propriétaire" 
         - https://caniuse.com/?search=-webkit-background-clip mentionne que cette propriété est OK sur FireFox & Chrome (dernière version)
   */
+  background-clip: text;
+  /* pour supprimer le problème mentionné par VisualstudioCode : Also define the standard property 'background-clip' for compatibility */
+
   color: transparent;
 
   opacity: 0;
@@ -1038,15 +1017,18 @@ cf. https://www.alsacreations.com/article/lire/539-Centrer-les-elements-ou-un-si
 /* MEN0923 : Plats – Apparition : faire un décalage entre les entrées - plats - desserts
 */
 .c_section-entrees__article {
-  animation-delay: 0.25s; /* MEN0930: apparition plus rapide des transitions (au lieu de 0.5s) */
+  animation-delay: 0.25s;
+  /* MEN0930: apparition plus rapide des transitions (au lieu de 0.5s) */
 }
 
 .c_section-plats__article {
-  animation-delay: 0.5s; /* MEN0930: apparition plus rapide des transitions (au lieu de 1.5s) */
+  animation-delay: 0.5s;
+  /* MEN0930: apparition plus rapide des transitions (au lieu de 1.5s) */
 }
 
 .c_section-desserts__article {
-  animation-delay: 0.75s; /* MEN0930: apparition plus rapide des transitions (au lieu de 2.5s) */
+  animation-delay: 0.75s;
+  /* MEN0930: apparition plus rapide des transitions (au lieu de 2.5s) */
 }
 
 /* MEN0923 fin */
