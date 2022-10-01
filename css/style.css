@@ -1038,15 +1038,15 @@ cf. https://www.alsacreations.com/article/lire/539-Centrer-les-elements-ou-un-si
 /* MEN0923 : Plats – Apparition : faire un décalage entre les entrées - plats - desserts
 */
 .c_section-entrees__article {
-  animation-delay: 0.5s;
+  animation-delay: 0.25s; /* MEN0930: apparition plus rapide des transitions (au lieu de 0.5s) */
 }
 
 .c_section-plats__article {
-  animation-delay: 1.5s;
+  animation-delay: 0.5s; /* MEN0930: apparition plus rapide des transitions (au lieu de 1.5s) */
 }
 
 .c_section-desserts__article {
-  animation-delay: 2.5s;
+  animation-delay: 0.75s; /* MEN0930: apparition plus rapide des transitions (au lieu de 2.5s) */
 }
 
 /* MEN0923 fin */
