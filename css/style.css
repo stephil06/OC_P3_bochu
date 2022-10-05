@@ -983,19 +983,18 @@ cf. https://www.alsacreations.com/article/lire/539-Centrer-les-elements-ou-un-si
 
 /* Pour chaque Article du menu: 
   - on applique l'animation "kf_menu-elements"
-  - pour une durée de 5s
-  - dans un délai différé de 1s
+  - pour une durée de 3s
+  - dans un délai différé de 0.5s
 */
 .c_menu__article--animation {
   animation-name: kf_menu-elements;
   animation-duration: 3s;
-  /* MEN0923 5s; */
+  
   animation-fill-mode: backwards;
   /* on garde les valeurs calculées lors de la 1ère étape de "kf_menu-elements" */
   /* backwards : applique les propriétés CSS de la première image clé (0% ou from), même s'il y a un délai d'attente (animation-delay) */
   animation-delay: 0.5s;
-  /* MEN0923 1s; */
-  /* définit la durée d'attente avant de démarrer l'animation */
+  /* définit la durée d'attente avant de démarrer l'animation (par rapport au chargement de la page) */
 }
 
 /* Pour chaque élément du menu: 
@@ -1014,24 +1013,18 @@ cf. https://www.alsacreations.com/article/lire/539-Centrer-les-elements-ou-un-si
   }
 }
 
-/* MEN0923 : Plats – Apparition : faire un décalage entre les entrées - plats - desserts
-*/
+/* Apparition des plats : faire un décalage entre les entrées - plats - desserts (de 0.25s) */
 .c_section-entrees__article {
   animation-delay: 0.25s;
-  /* MEN0930: apparition plus rapide des transitions (au lieu de 0.5s) */
 }
 
 .c_section-plats__article {
   animation-delay: 0.5s;
-  /* MEN0930: apparition plus rapide des transitions (au lieu de 1.5s) */
 }
 
 .c_section-desserts__article {
   animation-delay: 0.75s;
-  /* MEN0930: apparition plus rapide des transitions (au lieu de 2.5s) */
 }
-
-/* MEN0923 fin */
 
 /* Animation du bouton "c_button-choisir" -------------------------------------------------------------------------------- */
 
